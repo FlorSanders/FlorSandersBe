@@ -7,7 +7,7 @@ const path = require('path');
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+**/
 
 module.exports = {
     siteMetadata: {
@@ -19,7 +19,8 @@ module.exports = {
     // TODO: Add plugin manifest when launching
     plugins: [
         // Transformer plugins needed for Gatsby image
-        `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`, 
+        `gatsby-plugin-sharp`,
         // Gatsby Image
         {
             resolve: `gatsby-source-filesystem`,
@@ -36,6 +37,8 @@ module.exports = {
                 path: `${__dirname}/src/images/`,
             },
         },
+        // Styling: sass
+        `gatsby-plugin-sass`,
         // SEO Manager
         `gatsby-plugin-react-helmet`,
         // Make The site work offline
