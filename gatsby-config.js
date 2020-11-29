@@ -1,3 +1,8 @@
+// Adding environment variables
+require('dotenv').config();
+// Importing path
+const path = require('path');
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -11,6 +16,7 @@ module.exports = {
         keywords: 'Student, Entrepreneur, Developer, Software, Hardware, Open Data, IoT, Guitar, Travel, Cooking, Business, Personal',
         author: 'Flor Sanders',
     },
+    // TODO: Add plugin manifest when launching
     plugins: [
         // Transformer plugins needed for Gatsby image
         `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
@@ -50,11 +56,10 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+                trackingId: process.env.GA_TRACKING_ID,
                 head: false,
                 anonymize: true,
             },
         },
     ],
 }
-c
