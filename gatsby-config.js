@@ -1,3 +1,8 @@
+// Adding environment variables
+require('dotenv').config();
+// Importing path
+const path = require('path');
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -11,34 +16,16 @@ module.exports = {
         keywords: 'Student, Entrepreneur, Developer, Software, Hardware, Open Data, IoT, Guitar, Travel, Cooking, Business, Personal',
         author: 'Flor Sanders',
     },
+    // TODO: Add plugin manifest when launching
     plugins: [
         // Transformer plugins needed for Gatsby image
-        `gatsby-transformer-sharp`, 
-        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
         // Gatsby Image
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
                 path: path.join(__dirname, `src`, `images`),
-            },
-        },
-        // Styling: Postcss
-        {
-            resolve: `gatsby-plugin-sass`,
-            options: {
-                // Configure SASS to process Tailwind
-                postCssPlugins: [require('tailwindcss')],
-            },
-        },
-        // Styling: Tailwind CSS
-        {
-            resolve: `gatsby-plugin-sass`,
-            options: {
-                postCssPlugins: [
-                    require("tailwindcss"),
-                    require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
-                ],
             },
         },
         // Source from file system plugin
@@ -59,11 +46,10 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+                trackingId: process.env.GA_TRACKING_ID,
                 head: false,
                 anonymize: true,
             },
         },
     ],
 }
-c
