@@ -2,7 +2,7 @@ import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
 
 export default function FullscreenImage(props) {
-    var { image, header, footer, body } = props;
+    var { image, header, footer, children} = props;
     return (
         <BackgroundImage
             fluid={image}
@@ -13,7 +13,7 @@ export default function FullscreenImage(props) {
                         {header}
                     </div>
                     <div className='hero-body is-fullwidth'>
-                        {body}
+                        {children}
                     </div>
                     <div className='hero-foot'>
                         {footer}
@@ -22,4 +22,11 @@ export default function FullscreenImage(props) {
             </div>
         </BackgroundImage>
     )
+}
+
+FullscreenImage.defaultProps = {
+    image: null,
+    header: null,
+    children: null,
+    footer: null,
 }
