@@ -15,7 +15,7 @@ export default function Navbar() {
                 <div className="navbar-menu">
                     <div className="navbar-end">
                         {pages.map((page) => (
-                            <Link to={`/${page.toLowerCase()}`} className='navbar-item has-text-light is-size-4'>{page}</Link>
+                            <Link key={page} to={`/${page.toLowerCase()}`} className='navbar-item has-text-light is-size-4'>{page}</Link>
                         ))}
                     </div>
                 </div>

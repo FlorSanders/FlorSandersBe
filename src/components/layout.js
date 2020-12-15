@@ -2,13 +2,14 @@ import React from 'react';
 import { SEO, HeroImage, Navbar, Footer } from '../components';
 
 export default function Layout(props) {
-    var { title, children, image } = props;
+    var { title, children, image, backgroundPosition } = props;
 
     return (
         <div className='is-flex is-flex-direction-column' style={{ minHeight: '100vh' }}>
             <SEO title={title} />
             <HeroImage
                 image={image}
+                backgroundPosition={backgroundPosition}
                 header={
                     <Navbar />
                 }
@@ -21,7 +22,7 @@ export default function Layout(props) {
                         {title}
                     </div>
                 </div>    
-            </HeroImage>            
+            </HeroImage>
 
             <div className="section is-flex-grow-1 has-text-centered">
                 <div className="title is-1">

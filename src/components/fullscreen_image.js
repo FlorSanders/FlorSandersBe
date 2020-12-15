@@ -2,10 +2,11 @@ import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
 
 export default function HeroImage(props) {
-    var {image, header, footer, children, fullheight} = props;
+    var {image, header, footer, children, fullheight, backgroundPosition} = props;
     return (
         <BackgroundImage
             fluid={image}
+            style={{backgroundPosition}}
         >
             <div className='dark-overlay'>
                 <div className={`hero${fullheight?' is-fullheight':' is-medium'}`}>
@@ -29,5 +30,6 @@ HeroImage.defaultProps = {
     header: null,
     children: null,
     footer: null,
-    fullheight: false
+    fullheight: false,
+    backgroundPosition: 'center',
 }
