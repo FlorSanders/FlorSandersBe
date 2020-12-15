@@ -13,7 +13,7 @@ export default function Services({data}) {
 
 export const query = graphql`
     query {
-        file(name: { eq: "blog-background" }) {
+        file(name: { eq: "services-background" }) {
             childImageSharp {
                 fluid(quality: 90) {
                     ...GatsbyImageSharpFluid_withWebp

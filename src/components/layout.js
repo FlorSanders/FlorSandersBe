@@ -24,12 +24,10 @@ export default function Layout(props) {
                 </div>    
             </HeroImage>
 
-            <div className="section is-flex-grow-1 has-text-centered">
-                <div className="title is-1">
-                    CONTENT
+            <div className="section is-flex-grow-1">
+                <div className="container is-fullhd">
+                    {children}
                 </div>
-                <p>Hello world</p>
-                {children}
             </div>
 
             <footer className="footer">

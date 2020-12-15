@@ -8,14 +8,13 @@ export default function Footer() {
                     <a href="https://www.linkedin.com/in/flor-sanders/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className='is-size-2 mx-4 mb-2 has-text-dark' /> 
                     </a>
-                    <a href="https://www.linkedin.com/in/flor-sanders/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/FlorPSanders" target="_blank" rel="noopener noreferrer">
                         <FaTwitter className='is-size-2 mx-4 mb-2 has-text-dark'/> 
                     </a>
-                    <a href="https://www.linkedin.com/in/flor-sanders/" target="_blank" rel="noopener noreferrer">
+                    <a href="mailto:me@florsanders.be">
                         <FaEnvelope className='is-size-2 mx-4 mb-2 has-text-dark' />
                     </a>
                     <br />
-
                     &copy; {new Date().getFullYear()} | Created with <FaHeart className='has-text-danger' /> by Flor Sanders.
                 </div>
     )
