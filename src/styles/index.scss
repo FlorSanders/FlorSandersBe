@@ -32,6 +32,21 @@ $subtitle-family: $family-open-sans;
     }
 }
 
+// Navbar links font
+.navbar{
+    .navbar-brand {
+        a {
+            font-family: $family-open-sans;
+            font-weight: bold;
+        }
+    }
+    .navbar-menu {
+        a {
+            font-family: $family-open-sans;
+            font-weight: bold;
+        }
+    }
+}
 
 /* Import Bulma -- Don't reinvent the wheel */
 @import "~bulma/bulma.sass";

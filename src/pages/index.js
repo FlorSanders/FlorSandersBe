@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { NavigationTabs, TypingAnimation, FullscreenImage, SEO } from '../components';
+import { NavigationTabs, TypingAnimation, HeroImage, SEO } from '../components';
 import { whatIAm } from '../constants';
 
 import '../styles/index.scss';
@@ -13,26 +13,27 @@ export default function Home({ data }) {
     return (
         <React.Fragment>
             <SEO title='Home' />
-            <FullscreenImage
+            <HeroImage
                 image={image}
                 header={null}
                 footer={<NavigationTabs light={true}/>}
+                fullheight={true}
             >
                 <div className='container has-text-centered'>
-                        <div className="subtitle is-3 has-text-light">
-                            Hi! My name is
-                        </div>
-                        <div className='title is-1 has-text-light'>
-                            Flor Sanders
-                        </div>
-                        <div className="subtitle is-3 has-text-light is-flex-direction-row">
-                            <TypingAnimation
-                                base={'I am a'}
-                                content={whatIAm}
-                            />
-                        </div>
+                    <div className="subtitle is-3 has-text-light">
+                        Hi! My name is
                     </div>
-            </FullscreenImage>
+                    <div className='title is-1 has-text-light'>
+                        Flor Sanders
+                    </div>
+                    <div className="subtitle is-3 has-text-light is-flex-direction-row">
+                        <TypingAnimation
+                            base={'I am a'}
+                            content={whatIAm}
+                        />
+                    </div>
+                </div>
+            </HeroImage>
         </React.Fragment>
     );
 }
@@ -54,5 +55,4 @@ export const query = graphql`
             }
         }
     }
-      
 `
