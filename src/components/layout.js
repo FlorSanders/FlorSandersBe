@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import {FaHeart, FaCopyright} from 'react-icons/fa';
-import { SEO, HeroImage, Navbar } from '../components';
+import { SEO, HeroImage, Navbar, Footer } from '../components';
 
 export default function Layout(props) {
     var { title, children, image } = props;
@@ -15,7 +13,7 @@ export default function Layout(props) {
                     <Navbar />
                 }
                 footer={
-                    <div className="m-5"></div>
+                    <div className="m-6"></div>
                 }
             >
                 <div className="container has-text-centered">
@@ -34,9 +32,7 @@ export default function Layout(props) {
             </div>
 
             <footer className="footer">
-                <div className="container has-text-centered">
-                    &copy; {new Date().getFullYear()} | Created with <FaHeart className='has-text-danger' /> by Flor Sanders.
-                </div>
+                <Footer />
             </footer>
         </div>
     )
@@ -44,4 +40,6 @@ export default function Layout(props) {
 
 Layout.defaultProps = {
     title: 'Home',
+    image: null,
+    children: null,
 }
