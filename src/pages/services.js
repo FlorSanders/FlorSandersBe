@@ -3,7 +3,7 @@ import { Layout } from '../components';
 
 export default function Services() {
     return (
-        <Layout>
+        <Layout title='Services'>
 
         </Layout>
     )

@@ -18,7 +18,19 @@ $family-open-sans: BlinkMacSystemFont, -apple-system, "OpenSans", "Roboto", "Oxy
 $title-family: $family-open-sans;
 $subtitle-family: $family-open-sans;
 // Tabs text color
-$tabs-link-color: whitesmoke;
+// $tabs-link-color: whitesmoke;
+.tabs.has-text-light{
+    ul {
+        li{
+            a {
+                color: whitesmoke;
+                &:hover {
+                    color: #4a4a4a;
+                }
+            }
+        }
+    }
+}
 
 
 /* Import Bulma -- Don't reinvent the wheel */

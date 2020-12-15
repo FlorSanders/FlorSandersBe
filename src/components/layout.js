@@ -1,11 +1,22 @@
 import React from 'react';
-import {SEO} from '../components';
+import {NavigationTabs, SEO} from '../components';
 
 export default function Layout(props) {
+    var {title, children} = props;
     return (
         <React.Fragment>
-            <SEO title={null}/>
+            <SEO title={title}/>
+            <NavigationTabs></NavigationTabs>
+
+
             <p>Hello world</p>
+            {children}
+
+            <footer className="footer">
+                <div className="container has-text-centered">
+                    Created with [heart] by Flor Sanders.
+                </div>
+            </footer>
         </React.Fragment>
         
     )
