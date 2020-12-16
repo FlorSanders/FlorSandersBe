@@ -7,7 +7,7 @@ import { whatIAm } from '../constants';
 import '../styles/index.scss';
 
 export default function Home({ data }) {
-    var images = data.allImageSharp.edges.filter((elem) => (elem.node.parent.name.includes('main-background')));
+    var images = data.allImageSharp.edges.filter((elem) => (elem.node.parent.name.includes('main_background')));
     var image = images[Math.floor(Math.random() * images.length)].node.fluid;
 
     return (

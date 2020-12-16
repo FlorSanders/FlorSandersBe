@@ -14,7 +14,7 @@ export default function Contact({data}) {
 
 export const query = graphql`
     query {
-        file(name: { eq: "contact-background" }) {
+        file(name: { eq: "contact_background" }) {
             childImageSharp {
                 fluid(quality: 90) {
                     ...GatsbyImageSharpFluid_withWebp

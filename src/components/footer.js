@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaHeart, FaLinkedin, FaTwitter, FaEnvelope} from 'react-icons/fa';
+import {FaHeart, FaGithub ,FaLinkedin, FaTwitter, FaEnvelope} from 'react-icons/fa';
 
 export default function Footer() {
     return (
@@ -7,6 +7,9 @@ export default function Footer() {
                     
                     <a href="https://www.linkedin.com/in/flor-sanders/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className='is-size-2 mx-4 mb-2 has-text-dark' /> 
+                    </a>
+                    <a href="https://github.com/FlorSanders" target="_blank" rel="noopener noreferrer">
+                        <FaGithub className='is-size-2 mx-4 mb-2 has-text-dark'/> 
                     </a>
                     <a href="https://twitter.com/FlorPSanders" target="_blank" rel="noopener noreferrer">
                         <FaTwitter className='is-size-2 mx-4 mb-2 has-text-dark'/> 

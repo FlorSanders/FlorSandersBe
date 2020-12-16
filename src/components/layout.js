@@ -25,7 +25,7 @@ export default function Layout(props) {
             </HeroImage>
 
             <div className="section is-flex-grow-1">
-                <div className="container is-fullhd">
+                <div className="container is-max-desktop">
                     {children}
                 </div>
             </div>

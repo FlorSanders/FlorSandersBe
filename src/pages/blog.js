@@ -15,7 +15,7 @@ export default function Blog({data}) {
 
 export const query = graphql`
     query {
-        file(name: { eq: "blog-background" }) {
+        file(name: { eq: "blog_background" }) {
             childImageSharp {
                 fluid(quality: 90) {
                     ...GatsbyImageSharpFluid_withWebp
