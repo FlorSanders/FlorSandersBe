@@ -2,10 +2,10 @@ import React from 'react';
 import { SEO, HeroImage, Navbar, Footer } from '../components';
 
 export default function Layout(props) {
-    var { title, children, image, backgroundPosition } = props;
+    var { title, children, image, backgroundPosition, fullheight } = props;
 
     return (
-        <div className='is-flex is-flex-direction-column' style={{ minHeight: '100vh' }}>
+        <div className='is-flex is-flex-direction-column'>
             <SEO title={title} />
             <HeroImage
                 image={image}
@@ -16,6 +16,7 @@ export default function Layout(props) {
                 footer={
                     <div className="m-6"></div>
                 }
+                fullheight={fullheight}
             >
                 <div className="container has-text-centered">
                     <div className="title is-1 has-text-light">
@@ -24,10 +25,8 @@ export default function Layout(props) {
                 </div>    
             </HeroImage>
 
-            <div className="section is-flex-grow-1">
-                <div className="container is-max-desktop">
-                    {children}
-                </div>
+            <div className="container is-max-desktop">
+                {children}
             </div>
 
             <footer className="footer">
@@ -41,4 +40,5 @@ Layout.defaultProps = {
     title: 'Home',
     image: null,
     children: null,
+    fullheight: false,
 }
