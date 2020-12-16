@@ -39,6 +39,19 @@ $subtitle-family: $family-open-sans;
             font-family: $family-open-sans;
             font-weight: bold;
         }
+
+        .dropdown-navbar {
+            margin-right: 0;
+            margin-left: auto;
+            .dropdown-menu {
+                top: 3rem;
+                .navbar-items {
+                    .navbar-item {
+                        padding: 0.2rem;
+                    }
+                }
+            }
+        }
     }
     .navbar-menu {
         a {
