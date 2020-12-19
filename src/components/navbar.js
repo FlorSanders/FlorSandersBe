@@ -29,7 +29,7 @@ export default function Navbar() {
                     </Link>
                     
                     <div className={`dropdown dropdown-navbar is-right${menuOpen?' is-active':''}`}>
-                        <a class={`navbar-burger burger has-text-light${menuOpen?' is-active':''}`} href='/' onClick={toggleMenu}>
+                        <a className={`navbar-burger burger has-text-light${menuOpen?' is-active':''}`} href='/' onClick={toggleMenu}>
                             <span></span>
                             <span></span>
                             <span></span>

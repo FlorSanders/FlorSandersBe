@@ -39,6 +39,5 @@ export default function Layout(props) {
 Layout.defaultProps = {
     title: 'Home',
     image: null,
-    children: null,
     fullheight: false,
 }
