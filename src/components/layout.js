@@ -24,8 +24,8 @@ export default function Layout(props) {
                     </div>
                 </div>    
             </HeroImage>
-
-            <div className="container is-max-desktop">
+            
+            <div className="container is-max-desktop" style={{width:'100%'}}>
                 {children}
             </div>
 

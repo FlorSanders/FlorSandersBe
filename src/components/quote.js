@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImQuotesLeft} from 'react-icons/im';
+import { ImQuotesLeft } from 'react-icons/im';
 
 export default function Quote({children, attribution}) {
     return (

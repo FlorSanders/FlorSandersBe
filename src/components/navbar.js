@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className='container is-max-widescreen'>
             <div className='navbar is-transparent m-5'>
                 <div className="navbar-brand">
-                    <Link to='/' className='navbar-item has-text-light title is-4'>
+                    <Link to='/' className='navbar-item has-text-light is-size-4'>
                         Flor Sanders
                     </Link>
                     
