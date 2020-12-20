@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
-import { FaUser, FaEnvelope, FaPaperPlane } from 'react-icons/fa'
+import { FaUser, FaEnvelope, FaPaperPlane, FaTwitter, FaLinkedin, FaGlobe, FaPhoneAlt, FaCoffee, FaVideo } from 'react-icons/fa'
+import { AiFillWarning } from 'react-icons/ai';
 import { Layout, Toaster } from '../components';
 import { sendEmail } from '../constants';
 
@@ -27,24 +28,49 @@ export default function Contact({ data }) {
         <Layout title='Contact' image={image} backgroundPosition='top'>
             <div className="section is-fullwidth">
                 <div className="title is-3">
-                    Get in touch
+                    Get in touch!
                 </div>
 
                 <div className="columns">
                     <div className="column">
-                    Online
+                        <div className="subtitle is-4">
+                            <FaGlobe className="icon" /> Online
+                        </div>
+                        <div className="block">
+                            For short questions or messages, tweet me <a href="https://twitter.com/FlorPSanders" target="_blank" rel="noopener noreferrer"> @FlorPSanders <FaTwitter className='icon is-small' /></a> or send me a direct message on <a href="https://www.linkedin.com/in/flor-sanders/" target="_blank" rel="noopener noreferrer">LinkedIn <FaLinkedin className='icon is-small' /></a>.
+                        </div>
+                        <div className="block">
+                            For longer enquiries, please use the form below or send me an <a href="mailto:me@florsanders.be">email <FaEnvelope className="icon is-small" /> </a>.
+                        </div>
                     </div>
                     <div className="column">
-                    Phone
+                        <div className="subtitle is-4">
+                            <FaPhoneAlt className="icon" /> Phone
+                        </div>
+                        <div className="block">
+                            Want to discuss something quickly over the phone? Urgently need to get a hold of me?
+                            Feel free to give me a call on <a href="tel:+32479873490">0479873490 <FaPhoneAlt className='icon is-small'/></a>.
+                        </div>
                     </div>
                     <div className="column">
-                    In real life
+                        <div className="subtitle is-4">
+                            <FaCoffee className="icon" /> Real life
+                        </div>
+                        {/* <div className="block">
+                            <del>
+                                Want to grab a coffee and have a talk? Send me a message and we'll figure out a moment that fits both our calenders.
+                            </del>
+                        </div> */}
+                        <div className="block">
+                            <AiFillWarning className="icon is-small has-text-warning" /> Due to the ongoing Covid pandemic meetings in real life are obviously to be avoided.<br />
+                            As an alternative, just shoot me a message and we can grab a coffee during a video call <FaVideo className="icon is-small" />.
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="section is-fullwidth" >
-                <div className="title is-3">Drop me a message!</div>
+                <div className="title is-3">Drop me a message.</div>
 
                 <form method="POST" action="https://formspree.io/f/mrgoogov" onSubmit={submitForm}>
                     <div className="columns p-0 mb-0">
@@ -78,17 +104,17 @@ export default function Contact({ data }) {
                     </div>
                 </form>
             </div>
-            
-            <Toaster 
-                show={sent} 
+
+            <Toaster
+                show={sent}
                 color='success'
                 close={() => setSent(false)}
             >
                 <b>Thanks!</b> Your message has been successfully sent. Flor will contact you very soon!
             </Toaster>
 
-            <Toaster 
-                show={error} 
+            <Toaster
+                show={error}
                 color='danger'
                 close={() => setError(false)}
             >

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 export default function Toaster({show, children, color, close}) {
     const [progress, setProgress] = useState(0);
-    const speed = 0.75;
+    const speed = 0.5;
 
     const calculateProgress = () => {
         if(progress >= 100){
