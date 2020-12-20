@@ -6,8 +6,11 @@
 }
 
 /* Changing variables for Bulma */
-//
+// Changing input border colors & shadow colors for the contact form
 $input-focus-border-color: hsl(0, 0%, 48%);
+$input-focus-box-shadow-color: rgba($input-focus-border-color, 0.25); 
+$button-focus-border-color: $input-focus-border-color;
+$button-focus-box-shadow-color: $input-focus-box-shadow-color;
 
 // Typography
 $size-1: 5rem;

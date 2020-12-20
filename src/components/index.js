@@ -6,5 +6,6 @@ import TypingAnimation from './typing_animation';
 import Quote from './quote';
 import HeroImage from './fullscreen_image';
 import SEO from './seo';
+import Toaster from './toaster';
 
-export {Layout, NavigationTabs, Navbar, Footer, TypingAnimation, Quote, HeroImage, SEO};
+export {Layout, NavigationTabs, Navbar, Footer, TypingAnimation, Quote, HeroImage, SEO, Toaster};
