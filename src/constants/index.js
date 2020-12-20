@@ -36,7 +36,7 @@ export const sendEmail = (form, callback_success, callback_error) => {
         xhr.send(data);
 
     } else {
-        callback_error(<><b>Oops!</b> Please enter a valid e-mail address.</>);
+        callback_error(<><b>Oops!</b> Please enter a valid email address.</>);
     }
 }
 
