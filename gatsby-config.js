@@ -12,7 +12,7 @@ const path = require('path');
 module.exports = {
     siteMetadata: {
         title: 'Flor Sanders',
-        description: 'Personal and business website for Flor Sanders.\nA driven engineering student and starting entrepreneur.',
+        description: 'Personal and business website for Flor Sanders. A driven engineering student, freelance developer and IT consultant.',
         keywords: 'Student, Entrepreneur, Developer, Software, Hardware, Open Data, IoT, Guitar, Travel, Cooking, Business, Personal',
         author: 'Flor Sanders',
     },
@@ -21,20 +21,12 @@ module.exports = {
         // Transformer plugins needed for Gatsby image
         `gatsby-transformer-sharp`, 
         `gatsby-plugin-sharp`,
-        // Gatsby Image
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: path.join(__dirname, `src`, `images`),
-            },
-        },
         // Source from file system plugin
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `images`,
-                path: `${__dirname}/src/images/`,
+                name: `src`,
+                path: `${__dirname}/src`,
             },
         },
         // Styling: sass

@@ -19,7 +19,7 @@ export default function Services({data}) {
             
 
             <div className="section pb-0">
-                <Quote>
+                <Quote attribution="Mission statement">
                     Apply the skills I have acquired to help companies solve problems making use of technology.
                 </Quote>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import { Layout } from '../components';
+import { Layout, Quote } from '../components';
 
 
 export default function Blog({data}) {
@@ -8,7 +8,15 @@ export default function Blog({data}) {
 
     return (
         <Layout title='Blog' image={image} backgroundPosition='top'>
+            <div className="section pb-0">
+                <Quote attribution='Austin Kleon'>
+                    The only way to find your voice is to use it.
+                </Quote>
+            </div>
 
+            <div className="section">
+                Hello world
+            </div>
         </Layout>
     )
 }
