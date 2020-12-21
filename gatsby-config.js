@@ -1,7 +1,5 @@
 // Adding environment variables
 require('dotenv').config();
-// Importing path
-const path = require('path');
 
 /**
  * Configure your Gatsby site with this file.
@@ -29,6 +27,8 @@ module.exports = {
                 path: `${__dirname}/src`,
             },
         },
+        // MarkdownX for content management
+        `gatsby-plugin-mdx`,
         // Styling: sass
         `gatsby-plugin-sass`,
         // SEO Manager

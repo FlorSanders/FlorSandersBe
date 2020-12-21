@@ -16,8 +16,6 @@ export default function Services({data}) {
     
     return (
         <Layout title='Services' image={image}>
-            
-
             <div className="section pb-0">
                 <Quote attribution="Mission statement">
                     Apply the skills I have acquired to help companies solve problems making use of technology.

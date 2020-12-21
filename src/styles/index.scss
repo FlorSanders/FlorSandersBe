@@ -11,7 +11,8 @@ $input-focus-border-color: hsl(0, 0%, 48%);
 $input-focus-box-shadow-color: rgba($input-focus-border-color, 0.25); 
 $button-focus-border-color: $input-focus-border-color;
 $button-focus-box-shadow-color: $input-focus-box-shadow-color;
-
+// Icon dimensions
+$icon-dimensions-large: 4rem;
 // Typography
 $size-1: 5rem;
 $size-2: 3rem;
