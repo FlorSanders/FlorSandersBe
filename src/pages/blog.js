@@ -1,6 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import { Layout, Quote } from '../components';
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import { Layout, Quote, BlogPreview } from '../components';
 
 
 export default function Blog({ data }) {
@@ -8,7 +9,7 @@ export default function Blog({ data }) {
     var image = data.file.childImageSharp.fluid;
     // Retrieve blog post 
     var posts = data.allMdx.nodes.sort((post1, post2) => post1.frontmatter.date >= post2.frontmatter.date ? -1 : 1 );
-    // Retrieve images for blog posts
+    // Retrieve cover images for blog posts
     var postCovers = posts.map((post) => (data.allImageSharp.edges.filter((elem) => (elem.node.parent.name === post.frontmatter.cover))[0].node.fluid));
 
     return (
@@ -23,13 +24,16 @@ export default function Blog({ data }) {
                 <div className="title is-3">
                     Articles
                 </div>
-
-                {posts.map((post) => (
-                    <div key={post.frontmatter.slug}> 
-                        <div className="title is-4">
-                            {post.frontmatter.title}
-                        </div>
-                    </div>
+                {posts.map((post, index) => (
+                    <BlogPreview 
+                        title={post.frontmatter.title}
+                        subtitle={post.frontmatter.subtitle}
+                        image={postCovers[index]}
+                        excerpt={post.excerpt}
+                        slug={post.frontmatter.slug}
+                        tags={post.frontmatter.tags}
+                        date={post.frontmatter.date}
+                    />
                 ))}
             </div>
         </Layout>
@@ -40,7 +44,7 @@ export const query = graphql`
     query {
         allMdx {
             nodes {
-                body
+                excerpt
                 frontmatter {
                     slug
                     author

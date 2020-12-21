@@ -7,5 +7,6 @@ import Quote from './quote';
 import HeroImage from './fullscreen_image';
 import SEO from './seo';
 import Toaster from './toaster';
+import BlogPreview from './blog_preview';
 
-export {Layout, NavigationTabs, Navbar, Footer, TypingAnimation, Quote, HeroImage, SEO, Toaster};
+export {Layout, NavigationTabs, Navbar, Footer, TypingAnimation, Quote, HeroImage, SEO, Toaster, BlogPreview};
