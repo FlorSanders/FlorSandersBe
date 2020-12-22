@@ -121,7 +121,7 @@ export const query = graphql`
         allImageSharp {
             edges {
                 node {
-                    fluid(quality: 90) {
+                    fluid(quality: 100) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     parent {
@@ -134,7 +134,7 @@ export const query = graphql`
         }
         file(name: { eq: "services_background" }) {
             childImageSharp {
-                fluid(quality: 90) {
+                fluid(quality: 100, maxWidth: 1920) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
             }

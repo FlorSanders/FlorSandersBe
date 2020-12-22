@@ -1,8 +1,10 @@
 import React from 'react';
 import { SEO, HeroImage, Navbar, Footer } from '../components';
+import { getDateText } from '../constants';
 
 export default function BlogLayout(props) {
-    var { title, subtitle, children, image, backgroundPosition, fullheight } = props;
+    var { title, subtitle, author, date, children, image, backgroundPosition, fullheight } = props;
+    var dateText = getDateText(date);
 
     return (
         <div className='is-flex is-flex-direction-column'>
@@ -24,11 +26,15 @@ export default function BlogLayout(props) {
                     </div>
                     <div className="subtitle is-3 has-text-light">
                         {subtitle}
+                        <div className="subtitle is-4 has-text-white">
+                            By {author} on {dateText}
+                        </div>
                     </div>
-                </div>    
+
+                </div>
             </HeroImage>
-            
-            <div className="container is-max-desktop" style={{width:'100%'}}>
+
+            <div className="container is-max-desktop" style={{ width: '100%' }}>
                 {children}
             </div>
 
@@ -42,6 +48,8 @@ export default function BlogLayout(props) {
 BlogLayout.defaultProps = {
     title: 'Blog post sample',
     subtitle: 'Blog post',
+    author: 'Flor Sanders',
+    date: '1999-07-06',
     image: null,
     fullheight: false,
 }

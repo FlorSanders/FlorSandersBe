@@ -12,6 +12,8 @@ export default function BlogPost({data}) {
             title={page.frontmatter.title}
             subtitle={page.frontmatter.subtitle}
             image={image}
+            date={page.frontmatter.date}
+            author={page.frontmatter.author}
         >
             <div className=" section content">
                 <MDXRenderer>
@@ -27,7 +29,7 @@ query($slug: String!) {
     allImageSharp {
         edges {
             node {
-                fluid(quality: 90) {
+                fluid(quality: 100, maxWidth: 1920) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
                 parent {

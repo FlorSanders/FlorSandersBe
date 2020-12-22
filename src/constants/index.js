@@ -39,4 +39,12 @@ export const sendEmail = (form, callback_success, callback_error) => {
         callback_error(<><b>Oops!</b> Please enter a valid email address.</>);
     }
 }
-
+// Get textual day, month and year from the date string
+export const getDateText = (date) => {
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var dateObject = new Date(date);
+    var day = dateObject.getDate();
+    var month = monthNames[dateObject.getMonth()];
+    var year = dateObject.getFullYear();
+    return `${month} ${day}${day === 1 ? 'st' : (day === 2 ? 'nd' : (day === 3 ? 'rd' : 'th'))}, ${year}`;
+}
