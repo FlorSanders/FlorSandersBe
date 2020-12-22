@@ -19,6 +19,21 @@ module.exports = {
         // Transformer plugins needed for Gatsby image
         `gatsby-transformer-sharp`, 
         `gatsby-plugin-sharp`,
+        // MarkdownX for content management
+        `gatsby-remark-images`,
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 720,
+                        },
+                    },
+                ],
+            },
+        },
         // Source from file system plugin
         {
             resolve: `gatsby-source-filesystem`,
@@ -27,8 +42,7 @@ module.exports = {
                 path: `${__dirname}/src`,
             },
         },
-        // MarkdownX for content management
-        `gatsby-plugin-mdx`,
+        
         // Styling: sass
         `gatsby-plugin-sass`,
         // SEO Manager

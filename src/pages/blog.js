@@ -25,6 +25,7 @@ export default function Blog({ data }) {
                 </div>
                 {posts.map((post, index) => (
                     <BlogPreview 
+                        key={post.frontmatter.slug}
                         title={post.frontmatter.title}
                         subtitle={post.frontmatter.subtitle}
                         image={postCovers[index]}
