@@ -26,7 +26,7 @@ export default function Contact({ data }) {
 
     return (
         <Layout title='Contact' image={image} backgroundPosition='top'>
-            <div className="section is-fullwidth">
+            <div className="section is-fullwidth pb-0">
                 <div className="title is-3">
                     Get in touch!
                 </div>

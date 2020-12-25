@@ -8,8 +8,6 @@ export default function Blog({ data }) {
     var image = data.file.childImageSharp.fluid;
     // Retrieve blog post 
     var posts = data.allMdx.nodes.sort((post1, post2) => post1.frontmatter.date >= post2.frontmatter.date ? -1 : 1 );
-    // Retrieve cover images for blog posts
-    var postCovers = posts.map((post) => (data.allImageSharp.edges.filter((elem) => (elem.node.parent.name === post.frontmatter.cover))[0].node.fluid));
 
     return (
         <Layout title='Blog' image={image} backgroundPosition='top'>
@@ -23,12 +21,12 @@ export default function Blog({ data }) {
                 <div className="title is-3">
                     Articles
                 </div>
-                {posts.map((post, index) => (
+                {posts.map((post) => (
                     <BlogPreview 
                         key={post.frontmatter.slug}
                         title={post.frontmatter.title}
                         subtitle={post.frontmatter.subtitle}
-                        image={postCovers[index]}
+                        image={post.frontmatter.cover}
                         excerpt={post.excerpt}
                         slug={post.frontmatter.slug}
                         tags={post.frontmatter.tags}
@@ -53,20 +51,6 @@ export const query = graphql`
                     subtitle
                     tags
                     title
-                }
-            }
-        }
-        allImageSharp {
-            edges {
-                node {
-                    fluid(quality: 100) {
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
-                    parent {
-                        ... on File {
-                            name
-                        }
-                    }
                 }
             }
         }

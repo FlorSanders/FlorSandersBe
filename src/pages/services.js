@@ -1,24 +1,17 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import Img from 'gatsby-image';
 import { FaCheck } from 'react-icons/fa';
-import { Layout, Quote } from '../components';
+import { ImageProvider, Layout, Quote } from '../components';
 
 export default function Services({data}) {
     // Obtaining the background image for this page
     const image = data.file.childImageSharp.fluid;
-    // Obtaining the illustrations for services
-    var services_images = data.allImageSharp.edges.filter((elem) => (elem.node.parent.name.includes('services')));
-    var services_programming_image = services_images.filter((elem) => (elem.node.parent.name === 'services_programming'))[0].node.fluid;
-    var services_hardware_image = services_images.filter((elem) => (elem.node.parent.name === 'services_hardware'))[0].node.fluid;
-    var services_it_image = services_images.filter((elem) => (elem.node.parent.name === 'services_it'))[0].node.fluid;
-    var services_3dprinting_image = services_images.filter((elem) => (elem.node.parent.name === 'services_3dprinting'))[0].node.fluid;
-    
+   
     return (
         <Layout title='Services' image={image}>
-            <div className="section">
-                <Quote attribution="Mission statement">
-                    Apply the skills I have acquired to help companies solve problems making use of technology.
+            <div className="section pb-0">
+                <Quote attribution="Will Durant">
+                    Excellence is not an act, but a habit.
                 </Quote>
             </div>
 
@@ -30,7 +23,7 @@ export default function Services({data}) {
                     <div className="column">
                         <div className="card">
                             <div className="card-image">
-                                <Img fluid={services_programming_image} style={{height: '15rem'}} />
+                                <ImageProvider name='services_programming' style={{height: '15rem'}} />
                             </div>
                             <div className="card-content">
                                 <div className="subtitle is-4">
@@ -51,7 +44,7 @@ export default function Services({data}) {
                     <div className="column">
                         <div className="card">
                             <div className="card-image">
-                                <Img fluid={services_it_image} style={{height: '15rem'}} />
+                                <ImageProvider name='services_it' style={{height: '15rem'}} />
                             </div>
                             <div className="card-content">
                                 <div className="subtitle is-4">
@@ -74,7 +67,7 @@ export default function Services({data}) {
                     <div className="column">
                         <div className="card">
                             <div className="card-image">
-                                <Img fluid={services_3dprinting_image} style={{height: '15rem'}} />
+                                <ImageProvider name='services_3dprinting' style={{height: '15rem'}} />
                             </div>
                             <div className="card-content">
                                 <div className="subtitle is-4">
@@ -92,7 +85,7 @@ export default function Services({data}) {
                     <div className="column">
                         <div className="card">
                             <div className="card-image">
-                                <Img fluid={services_hardware_image} style={{height: '15rem'}} />
+                                <ImageProvider name="services_hardware" style={{height: '15rem'}} />
                             </div>
                             <div className="card-content">
                                 <div className="subtitle is-4">
@@ -142,20 +135,6 @@ export default function Services({data}) {
 
 export const query = graphql`
     query {
-        allImageSharp {
-            edges {
-                node {
-                    fluid(quality: 100) {
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
-                    parent {
-                        ... on File {
-                            name
-                        }
-                    }
-                }
-            }
-        }
         file(name: { eq: "services_background" }) {
             childImageSharp {
                 fluid(quality: 100, maxWidth: 1920) {

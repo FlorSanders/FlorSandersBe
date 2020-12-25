@@ -9,5 +9,6 @@ import HeroImage from './fullscreen_image';
 import SEO from './seo';
 import Toaster from './toaster';
 import BlogPreview from './blog_preview';
+import ImageProvider from './image_provider';
 
-export {Layout, BlogLayout, NavigationTabs, Navbar, Footer, TypingAnimation, Quote, HeroImage, SEO, Toaster, BlogPreview};
+export {Layout, BlogLayout, NavigationTabs, Navbar, Footer, TypingAnimation, Quote, HeroImage, SEO, Toaster, BlogPreview, ImageProvider};

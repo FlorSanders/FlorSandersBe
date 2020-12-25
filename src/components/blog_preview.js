@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { ImageProvider } from '../components';
 import { getDateText } from '../constants';
 
 export default function BlogPreview({ title, subtitle, image, excerpt, slug, tags, date }) {
@@ -8,7 +8,7 @@ export default function BlogPreview({ title, subtitle, image, excerpt, slug, tag
     return (
         <div key={slug} className="columns">
             <Link to={`/posts/${slug}`} className='column is-two-fifth'>
-                <Img fluid={image} />
+                <ImageProvider name={image} style={{height: '250px', borderRadius: '0.25rem'}} />
             </Link>
             <div className="column">
                 <div className="title is-4">
@@ -26,7 +26,7 @@ export default function BlogPreview({ title, subtitle, image, excerpt, slug, tag
                 </div>
                 <div>
                     {tags.map((tag) => (
-                        <div key="tag" className="tag is-light mr-2">
+                        <div key={tag} className="tag is-light mr-2">
                             {tag}
                         </div>
                     ))}
