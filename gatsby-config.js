@@ -13,6 +13,7 @@ module.exports = {
         description: 'Personal and business website for Flor Sanders. A driven engineering student, freelance developer and IT consultant.',
         keywords: 'Student, Entrepreneur, Developer, Software, Hardware, Open Data, IoT, Guitar, Travel, Cooking, Business, Personal',
         author: 'Flor Sanders',
+        siteUrl: 'https://www.florsanders.be',
     },
     // TODO: Add plugin manifest when launching
     plugins: [
