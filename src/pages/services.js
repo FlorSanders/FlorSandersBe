@@ -16,7 +16,7 @@ export default function Services({data}) {
     
     return (
         <Layout title='Services' image={image}>
-            <div className="section pb-0">
+            <div className="section">
                 <Quote attribution="Mission statement">
                     Apply the skills I have acquired to help companies solve problems making use of technology.
                 </Quote>
@@ -28,59 +28,83 @@ export default function Services({data}) {
                 </div>
                 <div className="columns">
                     <div className="column">
-                        <div className="subtitle is-4">
-                            Software & web development
-                        </div>
-                        <Img fluid={services_programming_image} style={{height: '15rem'}} />
-                        <div>
-                            <FaCheck /> Scientific programming (Python, MATLAB)
-                        </div>
-                        <div>
-                            <FaCheck /> Web development (HTML, CSS, JavaScript, React, Django)
-                        </div>
-                        <div>
-                            <FaCheck /> Embedded system programming (C/C++)
+                        <div className="card">
+                            <div className="card-image">
+                                <Img fluid={services_programming_image} style={{height: '15rem'}} />
+                            </div>
+                            <div className="card-content">
+                                <div className="subtitle is-4">
+                                    Software & web development
+                                </div>
+                                <div>
+                                    <FaCheck /> Scientific programming (Python, MATLAB)
+                                </div>
+                                <div>
+                                    <FaCheck /> Web development (HTML, CSS, JS, React, Django)
+                                </div>
+                                <div>
+                                    <FaCheck /> Embedded system programming (C/C++)
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="column">
-                        <div className="subtitle is-4">
-                            IT consultancy
-                        </div>
-                        <Img fluid={services_it_image} style={{height: '15rem'}} />
-                        <div>
-                            <FaCheck /> Advice
-                        </div>
-                        <div>
-                            <FaCheck /> Installation
-                        </div>
-                        <div>
-                            <FaCheck /> Maintenance & support
+                        <div className="card">
+                            <div className="card-image">
+                                <Img fluid={services_it_image} style={{height: '15rem'}} />
+                            </div>
+                            <div className="card-content">
+                                <div className="subtitle is-4">
+                                    IT consultancy
+                                </div>
+                                <div>
+                                    <FaCheck /> Advice
+                                </div>
+                                <div>
+                                    <FaCheck /> Installation
+                                </div>
+                                <div>
+                                    <FaCheck /> Maintenance & support
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="columns">
                     <div className="column">
-                        <div className="subtitle is-4">
-                            3D printing & CAD modelling
-                        </div>
-                        <Img fluid={services_3dprinting_image} style={{height: '15rem'}} />
-                        <div>
-                            <FaCheck /> 3D CAD Design (Autodesk Fusion 360)
-                        </div>
-                        <div>
-                            <FaCheck /> FDM 3D printing (Original Prusa i3 MK2)
+                        <div className="card">
+                            <div className="card-image">
+                                <Img fluid={services_3dprinting_image} style={{height: '15rem'}} />
+                            </div>
+                            <div className="card-content">
+                                <div className="subtitle is-4">
+                                    3D printing & CAD modelling
+                                </div>
+                                <div>
+                                    <FaCheck /> 3D CAD Design (Autodesk Fusion 360)
+                                </div>
+                                <div>
+                                    <FaCheck /> FDM 3D printing (Original Prusa i3 MK2)
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="column">
-                        <div className="subtitle is-4">
-                            Hardware prototyping
-                        </div>
-                        <Img fluid={services_hardware_image} style={{height: '15rem'}} />
-                        <div>
-                            <FaCheck /> PCB Design (ADS)
-                        </div>
-                        <div>
-                            <FaCheck /> FPGA programming (VHDL)
+                        <div className="card">
+                            <div className="card-image">
+                                <Img fluid={services_hardware_image} style={{height: '15rem'}} />
+                            </div>
+                            <div className="card-content">
+                                <div className="subtitle is-4">
+                                    Hardware prototyping
+                                </div>
+                                <div>
+                                    <FaCheck /> PCB Design (ADS)
+                                </div>
+                                <div>
+                                    <FaCheck /> FPGA programming (VHDL)
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
