@@ -52,8 +52,11 @@ $subtitle-family: $family-open-sans;
             margin-left: auto;
             .dropdown-menu {
                 top: 3rem;
+                min-width: 6rem;
                 .navbar-items {
                     .navbar-item {
+                        width: 100%;
+                        text-align: end;
                         padding: 0.2rem;
                     }
                 }
@@ -70,3 +73,32 @@ $subtitle-family: $family-open-sans;
 
 /* Import Bulma -- Don't reinvent the wheel */
 @import "~bulma/bulma.sass";
+
+/* Update the font sizes on mobile */
+@media(max-width: $tablet - 1px) {
+    .title.is-1, .subtitle.is-1, .is-size-1{
+        font-size: $size-2 !important;
+    }
+    .title.is-2, .subtitle.is-2, .is-size-2{
+        font-size: $size-3 !important;
+    }
+    .title.is-3, .subtitle.is-3, .is-size-3{
+        font-size: $size-4 !important;
+    }
+    .title.is-4, .subtitle.is-4, .is-size-4{
+        font-size: $size-5 !important;
+    }
+    .title.is-5, .subtitle.is-5, .is-size-5{
+        font-size: $size-6 !important;
+    }
+    .tabs.is-large {
+        font-size: $size-6 !important;
+    }
+    // .navbar{
+    //     .navbar-brand {
+    //         .dropdown-navbar {
+
+    //         }
+    //     }
+    // }
+}

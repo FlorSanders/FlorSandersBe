@@ -38,7 +38,12 @@ export default function Navbar() {
                         <div className="dropdown-menu">
                             <div className='navbar-items'>
                                 {pages.map((page) => (
-                                    <Link key={page} to={`/${page.toLowerCase()}`} className='navbar-item has-text-light is-size-4 is-justify-content-end'>{page}</Link>
+                                    <Link key={page} to={`/${page.toLowerCase()}`} className='navbar-item has-text-light is-size-4 is-justify-content-end has-text-right'>
+                                        <p className='has-text-right' style={{width: '100%'}}>
+                                            {page}
+                                        </p>
+                                        
+                                    </Link>
                                 ))}
                             </div>
                         </div>
