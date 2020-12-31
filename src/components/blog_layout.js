@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTwitter } from 'react-icons/fa';
 import { SEO, HeroImage, Navbar, Footer } from '../components';
 import { getDateText } from '../constants';
 import '../styles/index.scss';
@@ -34,6 +35,10 @@ export default function BlogLayout(props) {
 
                 </div>
             </HeroImage>
+
+            <div className="container has-background-info has-text-centered has-text-light is-size-5 p-3" style={{ width: '100vw', maxWidth: '100vw'}} >
+                <FaTwitter /> Have thoughts? Tweet me <a className="has-text-light" href="https://twitter.com/FlorPSanders" target="_blank" rel="noopener noreferrer">@FlorPSanders</a>!
+            </div>
 
             <div className="container is-max-desktop" style={{ width: '100%' }}>
                 {children}
