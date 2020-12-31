@@ -1,6 +1,7 @@
 import React from 'react';
 import { SEO, HeroImage, Navbar, Footer } from '../components';
 import { getDateText } from '../constants';
+import '../styles/index.scss';
 
 export default function BlogLayout(props) {
     var { title, subtitle, author, date, children, image, backgroundPosition, fullheight } = props;

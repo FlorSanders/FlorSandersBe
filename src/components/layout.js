@@ -1,5 +1,6 @@
 import React from 'react';
 import { SEO, HeroImage, Navbar, Footer } from '../components';
+import '../styles/index.scss';
 
 export default function Layout(props) {
     var { title, children, image, backgroundPosition, fullheight } = props;
