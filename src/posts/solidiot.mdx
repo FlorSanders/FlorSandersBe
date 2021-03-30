@@ -2,8 +2,8 @@
 
 slug: "solidiot"
 title: "Solid Pods for the Internet of Things"
-subtitle: "How the next web revolution can improve sensor networks."
-date: "2021-02-28"
+subtitle: "On privacy, a web revolution and the Internet of Things."
+date: "2021-03-30"
 author: "Flor Sanders"
 tags: ["Project", "IoT", "Solid"]
 cover: "solidiot-bg"
@@ -13,7 +13,7 @@ import internshipReport from "./solidiot.assets/internship-report.pdf"
 
 import thesisReport from "./solidiot.assets/thesis-report.pdf"
 
-Last year, during my bachelor thesis at Ghent University and subsequent internship at Digipolis Ghent (now [District09](https://district09.gent/en)), I had the pleasure of collaborating on a set of projects that explore the use of [Solid Pods](https://solidproject.org/) for storage of Internet of Things sensor data. As an electrical engineering student the topics of Linked Data and the Semantic Web were a touch out of my comfort zone, so it's safe to say I learnt a lot. In this article I will give an overview of the project, evaluate the current state of affairs and take a look towards future possibilities.
+Last year, during my bachelor thesis at Ghent University and subsequent internship at Digipolis Ghent (now District09), I had the pleasure of collaborating on a set of projects that explore the use of Solid Pods for storage of Internet of Things sensor data. While working on these projects was very interesting and rewarding, I felt like something was still missing. In the technical reports, it is thoroughly described what we did and how we achieved this. However, in this article I want to place the work in its context and hopefully spark your interest in the topic at hand.
 
 ## What is Solid?
 
@@ -21,7 +21,7 @@ Last year, during my bachelor thesis at Ghent University and subsequent internsh
 
 ### The World Wide Web
 
-Before diving into the Solid-project, I want to take a step back and have a look at the [world wide web](https://www.w3.org/History.html).<br></br>
+Before diving into the Solid project, I want to take a step back and have a look at the [world wide web](https://www.w3.org/History.html).<br></br>
 The web, as invented by Sir Tim Berners-Lee in 1989, consists of three core technologies:
 
 - An identification system for the documents on the web: **Universal Resource Locator/Identifier** (URL/URI).
@@ -36,9 +36,21 @@ While the web has been one of the main driving sources in the democratization of
 > 2. **System design that creates perverse incentives** where user value is sacrificed, such as ad-based revenue models that  commercially reward clickbait and the viral spread of misinformation.
 > 3. **Unintended negative consequences** of benevolent design, such as the outraged and polarised tone and quality of online discourse.
 
-An additional consequence of the ad-based revenue models mentioned in point two is the urge for corporations to track our every move in order to make their advertisements better targeted and hence more effective. In her book [*The age of Surveillance Capitalism*](https://shoshanazuboff.com/book/about/), Shoshana Zuboff describes this phenomenon as a threat to privacy, freedom and democracy. 
+An additional consequence of the ad-based revenue models mentioned in point two is the urge for corporations to track our every move in order to make their advertisements better targeted and hence more effective. In her book [*The age of Surveillance Capitalism*](https://shoshanazuboff.com/book/about/), Shoshana Zuboff describes this phenomenon as a threat to privacy, freedom and democracy.
 
-Having identified these issues, Berners-Lee is not planning to sit back and wait until they solve themselves. As a response, he started the Solid project in 2016. In 2018, he launched a commercial venture, [Inrupt](https://inrupt.com), to provide the Solid project with sufficient commercial energy.
+The argument in favor of these data processing and advertisement models is that they allow us to use these web-services for free. However, there are multiple forms of freedom. In the open software world, two forms of freedom are distinguished:
+
+- Free as in "free beer" (gratis). This is the model that most apps uses, in which no payment is required for the user to enjoy the service.
+- Free as in "freedom of speech" (libre), which signifies the liberty to use, study and change the program without in any way the user desires.
+
+Furthermore, in his essay [*Two Concepts of Liberty*](http://cactus.dixie.edu/green/B_Readings/I_Berlin%20Two%20Concpets%20of%20Liberty.pdf), the philosopher Isaiah Berlin identifies two forms of liberty, the second form of freedom:
+
+- Negative liberty, which can best be explained as the freedom from certain limitations or oppressions that limit the possibility to act.
+- Postive liberty on the other hand is related to the agency of an individual to decide what to do with the freedom available.
+
+In this regard, the web is a strange space. It is free in the sense that we have platforms that offer the liberty to connect with one another and achieve things previously imaginable at no monetary cost. On the other hand, they really aren't as users mostly lack the ability to change or even influence how these platforms work and cannot escape the ever increasing data collection that the companies behind them are chasing.
+
+Having identified these issues, Berners-Lee is not planning to sit back and wait until they magically go away. As a response, he started the Solid project in 2016. In 2018, he launched a commercial venture, [Inrupt](https://inrupt.com), to provide the Solid project with sufficient commercial energy.
 
 ### The Solid Project
 
@@ -49,11 +61,11 @@ So what is this silver bullet that should solve all the web's issues?<br></br>Th
 "Hold on!", I hear you say, "Why should I trust Solid or Inrupt with all of my data?"<br></br>
 The beautiful thing is: you don't have to. Solid is not a product that can only be sold by one company. Just like HTML and HTTP, it is an open standard. As a result, multiple providers can host and offer Solid Pods for you to choose from. And if you trust no-one, you could still take the route of self-hosting a server.
 
-The implications this change would have in terms of [paradigm shifts for web applications](https://ruben.verborgh.org/blog/2017/12/20/paradigm-shifts-for-the-decentralized-web/) and how this could unlock [increased innovation and economic growth](https://ruben.verborgh.org/blog/2020/12/07/a-data-ecosystem-fosters-sustainable-innovation/) are beyond the scope of this article and are already explained better than I could have in Ruben Verborgh's blog posts.
+In the end, the Solid Project is about choice. Putting the users back in control of their data allows them to decide which form of freedom they deem more important: monetary or otherwise. The further implications this change would have in terms of [paradigm shifts for web applications](https://ruben.verborgh.org/blog/2017/12/20/paradigm-shifts-for-the-decentralized-web/) and how this could unlock [increased innovation and economic growth](https://ruben.verborgh.org/blog/2020/12/07/a-data-ecosystem-fosters-sustainable-innovation/) are beyond the scope of this article and are already explained better than I could have in Ruben Verborgh's blog posts.
 
 ## Internet of Things
 
-The Internet of Things was first [coined](https://www.rfidjournal.com/that-internet-of-things-thing) as a term by Kevin Ashton in 1999 which describes a system where devices collect, process and communicate data with each other without the need for human intervention. In more practical terms, David Rose describes the idea by means of [*Enchanted Objects*](https://enchantedobjects.com/#/enchanted-objects/), where the objects we already use today get "smart", come to know us and respond to our needs. This is a simple yet powerful concept with many application fields, from autonomous vehicles in agriculture and [smart manufacturing](https://spectrum.ieee.org/telecom/internet/the-industrial-internet-of-things) to the [quantified self](https://quantifiedself.com/) and [medical applications](https://www2.deloitte.com/global/en/pages/life-sciences-and-healthcare/articles/medtech-internet-of-medical-things.html). Ashton put it this way:
+The Internet of Things (IoT) was first [coined](https://www.rfidjournal.com/that-internet-of-things-thing) as a term by Kevin Ashton in 1999 which describes a system where devices collect, process and communicate data with each other without the need for human intervention. In more practical terms, David Rose explains the concept in [*Enchanted Objects*](https://enchantedobjects.com/#/enchanted-objects/), where the objects we already use today get "smart", come to know us and respond to our needs. This is a simple yet powerful concept with many application fields, from autonomous vehicles in agriculture and [smart manufacturing](https://spectrum.ieee.org/telecom/internet/the-industrial-internet-of-things) to the [quantified self](https://quantifiedself.com/) and [medical applications](https://www2.deloitte.com/global/en/pages/life-sciences-and-healthcare/articles/medtech-internet-of-medical-things.html). Ashton put it this way:
 
 > The Internet of Things has the potential to change the world, just like the internet did. Maybe even more so.
 
@@ -63,19 +75,7 @@ The idea of applying the advantages of the web, and even the semantic web, to th
 
 ## Solid and IoT
 
-To investigate the 
 
-### Bachelor thesis
-
-
-
-![Second proof of concept diagram](solidiot.assets/proof-of-concept-1.png)
-
-### Internship
-
-
-
-![Second proof of concept diagram](solidiot.assets/proof-of-concept-2.png)
 
 
 ## Learn more
