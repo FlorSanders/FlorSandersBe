@@ -1,44 +1,55 @@
-import React from 'react';
-import { SEO, HeroImage, Navbar, Footer } from '../components';
-import '../styles/index.scss';
+/**
+ * Layout component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
 
-export default function Layout(props) {
-    var { title, children, image, backgroundPosition, fullheight } = props;
+import * as React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
-    return (
-        <div className='is-flex is-flex-direction-column'>
-            <SEO title={title} />
-            <HeroImage
-                image={image}
-                backgroundPosition={backgroundPosition}
-                header={
-                    <Navbar />
-                }
-                footer={
-                    <div className="m-6"></div>
-                }
-                fullheight={fullheight}
-            >
-                <div className="container has-text-centered">
-                    <div className="title is-1 has-text-light">
-                        {title}
-                    </div>
-                </div>    
-            </HeroImage>
-            
-            <div className="container is-max-desktop" style={{width:'100%'}}>
-                {children}
-            </div>
+import Header from "./header"
+import "./layout.css"
 
-            <footer className="footer">
-                <Footer />
-            </footer>
-        </div>
-    )
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  return (
+    <>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.0875rem 1.45rem`,
+        }}
+      >
+        <main>{children}</main>
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
+        >
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </footer>
+      </div>
+    </>
+  )
 }
 
-Layout.defaultProps = {
-    title: 'Home',
-    image: null,
-    fullheight: false,
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
+
+export default Layout

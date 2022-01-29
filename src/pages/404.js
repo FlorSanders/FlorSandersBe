@@ -1,23 +1,14 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Layout } from '../components';
+import * as React from "react"
 
-export default function NotFound({data}) {
-    var image = data.file.childImageSharp.fluid;
-    return (
-        <Layout title='Nothing to see here...' image={image} fullheight={true}>
-        </Layout>
-    )
-}
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-export const query = graphql`
-    query {
-        file(name: { eq: "404_background" }) {
-            childImageSharp {
-                fluid(quality: 100, maxWidth: 1920) {
-                    ...GatsbyImageSharpFluid_withWebp
-                }
-            }
-        }
-    }
-`
+const NotFoundPage = () => (
+  <Layout>
+    <Seo title="404: Not found" />
+    <h1>404: Not Found</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  </Layout>
+)
+
+export default NotFoundPage

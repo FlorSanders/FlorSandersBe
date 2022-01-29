@@ -1,58 +1,31 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import * as React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-import { NavigationTabs, TypingAnimation, HeroImage, SEO } from '../components';
-import { whatIAm } from '../constants';
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-import '../styles/index.scss';
+const IndexPage = () => (
+  <Layout>
+    <Seo title="Home" />
+    <h1>Hi people</h1>
+    <p>Welcome to your new Gatsby site.</p>
+    <p>Now go build something great.</p>
+    <StaticImage
+      src="../images/gatsby-astronaut.png"
+      width={300}
+      quality={95}
+      formats={["auto", "webp", "avif"]}
+      alt="A Gatsby astronaut"
+      style={{ marginBottom: `1.45rem` }}
+    />
+    <p>
+      <Link to="/page-2/">Go to page 2</Link> <br />
+      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
+      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
+      <Link to="/using-dsg">Go to "Using DSG"</Link>
+    </p>
+  </Layout>
+)
 
-export default function Home({ data }) {
-    var images = data.allImageSharp.edges.filter((elem) => (elem.node.parent.name.includes('main_background')));
-    var image = images[Math.floor(Math.random() * images.length)].node.fluid;
-
-    return (
-        <React.Fragment>
-            <SEO title='Home' />
-            <HeroImage
-                image={image}
-                header={null}
-                footer={<NavigationTabs light={true}/>}
-                fullheight={true}
-            >
-                <div className='container has-text-centered'>
-                    <div className="subtitle is-3 has-text-light">
-                        Hi! My name is
-                    </div>
-                    <div className='title is-1 has-text-light'>
-                        Flor Sanders
-                    </div>
-                    <div className="subtitle is-3 has-text-light is-flex-direction-row">
-                        <TypingAnimation
-                            base={'I am a'}
-                            content={whatIAm}
-                        />
-                    </div>
-                </div>
-            </HeroImage>
-        </React.Fragment>
-    );
-}
-
-export const query = graphql`
-    query {
-        allImageSharp {
-            edges {
-                node {
-                    fluid(quality: 100, maxWidth: 1920) {
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
-                    parent {
-                        ... on File {
-                            name
-                        }
-                    }
-                }
-            }
-        }
-    }
-`
+export default IndexPage

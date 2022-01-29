@@ -1,68 +1,35 @@
-// Adding environment variables
-require('dotenv').config();
-
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
-**/
-
 module.exports = {
-    siteMetadata: {
-        title: 'Flor Sanders',
-        description: 'Personal and business website for Flor Sanders. A driven engineering student, freelance developer and IT consultant.',
-        keywords: 'Student, Entrepreneur, Developer, Software, Hardware, Open Data, IoT, Guitar, Travel, Cooking, Business, Personal',
-        author: 'Flor Sanders',
-        siteUrl: 'https://www.florsanders.be',
+  siteMetadata: {
+    title: `Flor Sanders`,
+    description: `Flor Sanders is a Belgian electrical engineer and developer with a focus on sustainable and values-first innovation and technology.`,
+    author: `Flor Sanders`,
+    siteUrl: `https://www.florsanders.be/`,
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
     },
-    // TODO: Add plugin manifest when launching
-    plugins: [
-        // Transformer plugins needed for Gatsby image
-        `gatsby-transformer-sharp`, 
-        `gatsby-plugin-sharp`,
-        // MarkdownX for content management
-        `gatsby-remark-images`,
-        {
-            resolve: `gatsby-plugin-mdx`,
-            options: {
-                gatsbyRemarkPlugins: [
-                    {
-                        resolve: `gatsby-remark-images`,
-                        options: {
-                            maxWidth: 720,
-                            linkImagesToOriginal: false,
-                            withWebp: true,
-                            quality: 95,
-                        },
-                    },
-                ],
-            },
-        },
-        // Source from file system plugin
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `src`,
-                path: `${__dirname}/src`,
-            },
-        },
-        
-        // Styling: sass
-        `gatsby-plugin-sass`,
-        // SEO Manager
-        `gatsby-plugin-react-helmet`,
-        // Make The site work offline
-        `gatsby-plugin-offline`,
-        // Automatically create a sitemap
-        `gatsby-plugin-sitemap`,
-        // Google analytics
-        {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: process.env.GA_TRACKING_ID,
-                head: false,
-                anonymize: true,
-            },
-        },
-    ],
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#000000`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        theme_color: `#000000`,
+        display: `minimal-ui`,
+        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+  ],
 }
