@@ -14,8 +14,10 @@ export default function Home({ data }) {
 
   return (
     <React.Fragment>
-      <script type="text/turtle">
-        {`
+      <script
+        type="text/turtle"
+        dangerouslySetInnerHTML={{
+          __html: `
                 @base <https://www.florsanders.be/>.
                 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
                 @prefix schema: <http://schema.org/>.
@@ -24,8 +26,9 @@ export default function Home({ data }) {
                     a schema:Person;
                     foaf:name "Flor Sanders";
                     foaf:knows <https://pietercolpaert.be/#me>.
-                `}
-      </script>
+                `,
+        }}
+      ></script>
       <SEO title="Home" />
       <HeroImage
         image={image}
