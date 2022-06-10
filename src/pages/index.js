@@ -156,10 +156,9 @@ export default function About() {
               <P>
                 As a former board member at{" "}
                 <A to="https://fris.ugent.be/">FRiS</A> and member of the
-                faculty council of the{" "}
-                <A to="https://www.ugent.be/ea">UGent FEA</A> as well as various
-                commitees, I defend the interests of my fellow engineering
-                students.
+                faculty council of the <A to="https://ugent.be/ea">UGent FEA</A>{" "}
+                as well as various commitees, I defend the interests of my
+                fellow engineering students.
               </P>
               <P>My main points of focus are:</P>
               <Ol>
