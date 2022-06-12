@@ -30,6 +30,9 @@ function Seo({ page, title, description, ...props }) {
   return (
     <Helmet
       title={_title}
+      htmlAttributes={{
+        lang: "en",
+      }}
       meta={[
         {
           name: "description",

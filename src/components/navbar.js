@@ -19,6 +19,7 @@ function Navbar({ links, ...props }) {
       </Navlink>
       <button
         type="button"
+        name="menu"
         className="block hover:bg-gray-100 p-2 rounded-lg transition-colors duration-300 lg:hidden"
         onClick={() => setMenuOpen(!menuOpen)}
       >
