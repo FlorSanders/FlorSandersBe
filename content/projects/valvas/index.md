@@ -11,7 +11,7 @@ for:
     url: https://redpencil.io/
 technologies:
   - label: Ember.js
-    url: https://emberjs.com/learn/
+    url: https://emberjs.com/
   - label: Semantic Works
     url: https://semantic.works/
   - label: SPARQL

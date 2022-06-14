@@ -11,7 +11,7 @@ for:
     url: https://redpencil.io/
 technologies:
   - label: Ember.js
-    url: https://emberjs.com/learn/
+    url: https://emberjs.com/
   - label: json:api
     url: https://jsonapi.org/
   - label: PostgreSQL
