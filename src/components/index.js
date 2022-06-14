@@ -3,6 +3,7 @@ import A from "./link";
 import Ol from "./ordered-list";
 import Ul from "./unordered-list";
 import Li from "./list-element";
+import Input from "./input";
 import MDXContent from "./mdx-content";
 import Slider from "./slider";
 import Navlink from "./navlink";
@@ -26,6 +27,7 @@ export {
   Ol,
   Ul,
   Li,
+  Input,
   MDXContent,
   Header,
   Footer,
