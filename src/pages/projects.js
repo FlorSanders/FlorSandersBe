@@ -1,9 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import { IoLogoGithub } from "react-icons/io5";
-import { A, Layout } from "../components";
+import { A, MDXContent, Layout } from "../components";
 import { formatIsoDate, formatGithubUrl } from "../utils";
 
 export default function Projects({ data }) {
@@ -22,77 +21,108 @@ export default function Projects({ data }) {
           className="w-full brightness-75"
           height={680}
           quality={90}
-          alt="About cover image"
+          alt="Projects cover image"
         />
       }
     >
       <h2 className="text-4xl font-poppins pt-6 pb-8">Timeline</h2>
       <div className="w-full flex flex-col">
+        <div className="w-12 h-2 bg-black rounded-lg relative left-7 lg:self-center lg:left-0" />
         {projects.map((project, index) => {
-          const { id, slug, frontmatter, body } = project;
-          const { cover, date, github, technologies, title, url } = frontmatter;
+          const { id, frontmatter, body } = project;
+          const {
+            cover,
+            date,
+            github,
+            technologies,
+            title,
+            url,
+            for: organizations,
+          } = frontmatter;
           return (
             <div
               key={id}
-              className={`w-11/12 sm:w-4/5 lg:w-1/2 relative border-black inline-grid self-end border-l-8 py-4 -left-1 ${
-                index % 2
-                  ? "lg:self-start lg:border-r-8 lg:-right-1 lg:left-auto lg:border-l-0"
-                  : ""
-              }`}
+              className={`hover:child-opacity-100 relative w-full flex items-center ${
+                index % 2 ? "flex-row-reverse" : "flex-row"
+              } `}
+              // hover:child-opacity-100 is a custom className defined in `../styles/global.css`
             >
               <div
-                className={`w-11/12 lg:w-5/6 xl:w-8/12 relative flex flex-col items-start pl-8 before:-left-4 ${
-                  index % 2
-                    ? "lg:items-end lg:text-right lg:justify-self-end lg:pr-8 lg:before:left-auto lg:before:-right-4"
-                    : ""
-                }
-                before:absolute before:bg-white before:border-2 before:z-10 before:border-black before:w-6 before:h-6 before:rounded-full before:top-1
-                `}
+                className={`hidden lg:flex opacity-0 transition-opacity duration-300 lg:flex-col lg:flex-1`}
               >
-                {url ? (
-                  <A to={url} className="text-2xl font-poppins">
-                    {title}
-                  </A>
-                ) : (
-                  <h3 className="text-2xl font-poppins">{title}</h3>
-                )}
-                {github && Array.isArray(github) ? (
-                  <div className="flex flex-row items-center space-x-2">
-                    {github.map((ghUrl) => (
-                      <A
-                        key={ghUrl}
-                        to={ghUrl}
-                        className={`flex flex-row items-center ${
-                          index % 2 ? "justify-end" : ""
-                        }`}
-                      >
-                        <IoLogoGithub className="mr-1" />
-                        {formatGithubUrl(ghUrl)}
-                      </A>
-                    ))}
+                <div className="w-3/4 mx-6">
+                  <MDXContent>{body}</MDXContent>
+                </div>
+              </div>
+              <div
+                className="left-timeline absolute top-8 w-8 h-8 z-10 bg-white border-black border-4 rounded-full"
+                // left-timeline is a custom className defined in `../styles/global.css`
+              />
+              <div
+                className={`ml-12 lg:ml-0 flex-1 flex flex-col border-black border-l-8 ${
+                  index % 2 ? "lg:border-r-8 lg:border-l-0" : ""
+                }`}
+              >
+                <div
+                  className={`w-3/4 mx-6 py-8 flex flex-col space-y-1 ${
+                    index % 2 ? "lg:self-end lg:items-end" : ""
+                  }`}
+                >
+                  {url ? (
+                    <A to={url} className="text-2xl font-poppins">
+                      {title}
+                    </A>
+                  ) : (
+                    <h3 className="text-2xl font-poppins">{title}</h3>
+                  )}
+                  <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row flex-wrap">
+                    {organizations
+                      ? organizations.map(({ label, url }) => (
+                          <A key={url} to={url} className="pr-1">
+                            @{label}
+                          </A>
+                        ))
+                      : null}
                   </div>
-                ) : null}
-                <span className="font-poppins">{formatIsoDate(date)}</span>
-                <GatsbyImage
-                  image={getImage(cover)}
-                  width={600}
-                  quality={95}
-                  className="w-3/4 lg:w-full aspect-video border-2 border-black rounded-lg"
-                  alt={`${title} cover image`}
-                />
-                {technologies && Array.isArray(technologies) ? (
-                  <div className="flex flex-row space-x-2">
-                    {technologies.map(({ label, url }) => (
-                      <A key={label} to={url}>
-                        #{label}
-                      </A>
-                    ))}
-                  </div>
-                ) : null}
+                  {github && Array.isArray(github) ? (
+                    <div className="flex flex-row items-center flex-wrap">
+                      {github.map((ghUrl) => (
+                        <A
+                          key={ghUrl}
+                          to={ghUrl}
+                          className={`flex flex-row items-center pr-1 ${
+                            index % 2 ? "justify-end" : ""
+                          }`}
+                        >
+                          <IoLogoGithub className="mr-1" />
+                          {formatGithubUrl(ghUrl)}
+                        </A>
+                      ))}
+                    </div>
+                  ) : null}
+                  <span className="font-poppins">{formatIsoDate(date)}</span>
+                  <GatsbyImage
+                    image={getImage(cover)}
+                    width={750}
+                    quality={95}
+                    className="w-full aspect-video border-2 border-black rounded-lg"
+                    alt={`${title} cover image`}
+                  />
+                  {technologies && Array.isArray(technologies) ? (
+                    <div className="flex flex-row flex-wrap">
+                      {technologies.map(({ label, url }) => (
+                        <A key={label} to={url} className="pr-1">
+                          #{label}
+                        </A>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
               </div>
             </div>
           );
         })}
+        <div className="w-12 h-2 bg-black rounded-lg relative left-7 lg:self-center lg:left-0" />
       </div>
     </Layout>
   );
@@ -103,7 +133,6 @@ export const pageQuery = graphql`
     allMdx(filter: { fileAbsolutePath: { regex: "/.*/projects/.*/" } }) {
       nodes {
         id
-        slug
         fileAbsolutePath
         body
         frontmatter {
@@ -114,12 +143,16 @@ export const pageQuery = graphql`
           }
           date
           github
+          title
+          url
           technologies {
             label
             url
           }
-          title
-          url
+          for {
+            label
+            url
+          }
         }
       }
     }
