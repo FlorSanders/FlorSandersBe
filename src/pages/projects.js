@@ -1,15 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import fuzzysort from "fuzzysort";
 import { IoLogoGithub } from "react-icons/io5";
-import { A, MDXContent, Layout } from "../components";
+import { A, MDXContent, Layout, Input } from "../components";
 import { formatIsoDate, formatGithubUrl } from "../utils";
 
 export default function Projects({ data }) {
-  let projects = data?.allMdx?.nodes || [];
-  projects = projects.sort((a, b) =>
-    a.frontmatter.date < b.frontmatter.date ? 1 : -1
-  );
+  // State
+  const [projects, setProjects] = useState([]);
+  const [search, setSearch] = useState("");
+  // Effects
+  useEffect(() => {
+    const allProjects = (data?.allMdx?.nodes || []).map(
+      ({ frontmatter, ...project }) => ({
+        ...project,
+        ...frontmatter,
+        technologiesString: (frontmatter?.technologies || [])
+          .map(({ label }) => label)
+          .join(" "),
+        organizationsString: (frontmatter?.for || [])
+          .map(({ label }) => label)
+          .join(" "),
+      })
+    );
+
+    const sortedProjects = allProjects.sort((a, b) =>
+      a.date < b.date ? 1 : -1
+    );
+
+    if (search) {
+      const delayedSearch = setTimeout(() => {
+        const results = fuzzysort.go(search, sortedProjects, {
+          keys: ["title", "technologiesString", "organizationsString"],
+        });
+        console.log(results.map((result) => result.obj.technologiesString));
+        setProjects(results.map((result) => result.obj));
+      }, 200);
+      return () => clearTimeout(delayedSearch);
+    } else {
+      setProjects(sortedProjects);
+    }
+  }, [search, data?.allMdx?.nodes]);
 
   return (
     <Layout
@@ -26,11 +58,18 @@ export default function Projects({ data }) {
       }
     >
       <h2 className="text-4xl font-poppins pt-6 pb-8">Timeline</h2>
+      <Input
+        onChange={setSearch}
+        value={search}
+        className="w-3/4 lg:w-1/2 mb-8"
+        placeholder="Search"
+      />
       <div className="w-full flex flex-col">
         <div className="w-12 h-2 bg-black rounded-lg relative left-7 lg:self-center lg:left-0" />
         {projects.map((project, index) => {
-          const { id, frontmatter, body } = project;
           const {
+            id,
+            body,
             cover,
             date,
             github,
@@ -38,7 +77,8 @@ export default function Projects({ data }) {
             title,
             url,
             for: organizations,
-          } = frontmatter;
+          } = project;
+
           return (
             <div
               key={id}
@@ -48,7 +88,9 @@ export default function Projects({ data }) {
               // hover:child-opacity-100 is a custom className defined in `../styles/global.css`
             >
               <div
-                className={`hidden lg:flex opacity-0 transition-opacity duration-300 lg:flex-col lg:flex-1`}
+                className={`hidden lg:flex opacity-0 transition-opacity duration-300 lg:flex-col lg:flex-1 ${
+                  index % 2 ? "" : "items-end"
+                }`}
               >
                 <div className="w-3/4 mx-6">
                   <MDXContent>{body}</MDXContent>
