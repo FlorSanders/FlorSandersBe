@@ -14,6 +14,9 @@ import ColumnSection from "./column-section";
 import SectionColumn from "./column-section-column";
 import SliderSection from "./slider-section";
 import SectionSlide from "./slider-section-slide";
+import Timeline from "./timeline";
+import TimelineElement from "./timeline-element";
+import ProjectContent from "./project-content";
 import Header from "./header";
 import Footer from "./footer";
 import HomeNavbar from "./home-navbar";
@@ -42,6 +45,9 @@ export {
   Slider,
   SliderSection,
   SectionSlide,
+  Timeline,
+  TimelineElement,
+  ProjectContent,
   Layout,
   Seo,
 };
