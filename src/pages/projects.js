@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import fuzzysort from "fuzzysort";
@@ -7,9 +7,12 @@ import { A, MDXContent, Layout, Input } from "../components";
 import { formatIsoDate, formatGithubUrl } from "../utils";
 
 export default function Projects({ data }) {
+  // References
+  const timelineRef = useRef(null);
   // State
   const [projects, setProjects] = useState([]);
   const [search, setSearch] = useState("");
+  const [limit, setLimit] = useState(2);
   // Effects
   useEffect(() => {
     const allProjects = (data?.allMdx?.nodes || []).map(
@@ -42,6 +45,28 @@ export default function Projects({ data }) {
       setProjects(sortedProjects);
     }
   }, [search, data?.allMdx?.nodes]);
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "20px",
+      threshold: 1.0,
+    };
+    // initialize IntersectionObserver and attaching to Load More div
+    const observer = new IntersectionObserver(loadMore, options);
+    if (timelineRef.current) {
+      observer.observe(timelineRef.current);
+    }
+  }, []);
+
+  const loadMore = (entities) => {
+    const target = entities[0];
+    if (target.isIntersecting) {
+      console.log("more");
+      setLimit((limit) => limit + 2);
+    }
+  };
+
+  console.log(projects.length);
 
   return (
     <Layout
@@ -66,7 +91,7 @@ export default function Projects({ data }) {
       />
       <div className="w-full flex flex-col">
         <div className="w-12 h-2 bg-black rounded-lg relative left-7 lg:self-center lg:left-0" />
-        {projects.map((project, index) => {
+        {projects.slice(0, limit).map((project, index) => {
           const {
             id,
             body,
@@ -164,7 +189,13 @@ export default function Projects({ data }) {
             </div>
           );
         })}
-        <div className="w-12 h-2 bg-black rounded-lg relative left-7 lg:self-center lg:left-0" />
+        {limit < projects.length - 1 ? (
+          <div className="border-dashed border-4 border-black relative left-12 h-12 w-0 lg:self-center lg:left-0" />
+        ) : null}
+        <div
+          className="w-12 h-2 bg-black rounded-lg relative left-7 lg:self-center lg:left-0"
+          ref={timelineRef}
+        />
       </div>
     </Layout>
   );
