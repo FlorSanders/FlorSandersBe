@@ -1,3 +1,4 @@
+import Button from "./button";
 import P from "./paragraph";
 import A from "./link";
 import Ol from "./ordered-list";
@@ -6,6 +7,7 @@ import Li from "./list-element";
 import Input from "./input";
 import MDXContent from "./mdx-content";
 import Slider from "./slider";
+import Pagination from "./pagination";
 import Navlink from "./navlink";
 import Section from "./section";
 import HorizontalSection from "./horizontal-section";
@@ -25,6 +27,7 @@ import Layout from "./layout";
 import Seo from "./seo";
 
 export {
+  Button,
   P,
   A,
   Ol,
@@ -50,4 +53,5 @@ export {
   ProjectContent,
   Layout,
   Seo,
+  Pagination,
 };
