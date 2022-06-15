@@ -56,6 +56,7 @@ export default function Projects({ data }) {
         <StaticImage
           src="../assets/images/projects-cover.jpg"
           className="w-full brightness-75"
+          width={1920}
           height={680}
           quality={90}
           alt="Projects cover image"

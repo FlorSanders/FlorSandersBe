@@ -25,6 +25,7 @@ export default function About() {
         <StaticImage
           src="../assets/images/about-cover.jpg"
           className="w-full brightness-75"
+          width={1920}
           height={680}
           quality={90}
           alt="About cover image"
