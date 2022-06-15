@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { P, Button } from ".";
+import { Button } from ".";
 
 function Pagination({ page, setPage, maxPage, className, ...props }) {
   return (
