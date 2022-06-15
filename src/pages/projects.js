@@ -39,7 +39,6 @@ export default function Projects({ data }) {
         const results = fuzzysort.go(search, sortedProjects, {
           keys: ["title", "technologiesString", "organizationsString"],
         });
-        console.log(results.map((result) => result.obj.technologiesString));
         setProjects(results.map((result) => result.obj));
       }, 200);
       return () => clearTimeout(delayedSearch);
