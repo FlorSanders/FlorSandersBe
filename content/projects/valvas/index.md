@@ -15,5 +15,5 @@ technologies:
   - label: Semantic Works
     url: https://semantic.works/
   - label: SPARQL
-    url: https://www.w3.org/TR/sparql11-query/
+    url: https://www.w3.org/TR/sparql-query/
 ---
