@@ -5,7 +5,7 @@ subtitle: "A look back on my electrical engineering bachelor."
 date: "2020-07-06"
 author: "Flor Sanders"
 tags: ["Personal", "Study"]
-cover: "./lookback-bg.png"
+cover: "./lookback-bg.jpg"
 ---
 
 On the first day at university one of the professors told us the following:

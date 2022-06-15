@@ -1,6 +1,6 @@
 ---
 slug: "cookingatclip"
-subauthor: "The experience of working as a cook"
+title: "The experience of working as a cook"
 subtitle: "Six years of volunteering at Clip Taalvakanties."
 date: "2020-08-09"
 author: "Flor Sanders"
