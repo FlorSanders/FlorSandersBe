@@ -8,17 +8,17 @@ function Pagination({ page, setPage, maxPage, className, ...props }) {
       <Button
         isDisabled={page === 1}
         onClick={() => setPage(page - 1)}
-        className="col-span-1 mx-4"
+        className="col-span-1 md:mx-4"
       >
         previous
       </Button>
-      <p className="font-poppins text-lg text-center col-span-1 mx-4">
+      <p className="invisible md:visible font-poppins text-lg text-center col-span-1 md:mx-4">
         page {page} of {maxPage}
       </p>
       <Button
         isDisabled={page === maxPage}
         onClick={() => setPage(page + 1)}
-        className="col-span-1 mx-4"
+        className="col-span-1 md:mx-4"
       >
         next
       </Button>
