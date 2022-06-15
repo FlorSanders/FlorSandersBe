@@ -1,8 +1,14 @@
-export default function formatIsoDate(date) {
+export default function formatIsoDate(date, options = {}) {
   const dateObject = new Date(date);
 
-  return dateObject.toLocaleDateString("en", {
+  const defaultOptions = {
     month: "long",
     year: "numeric",
+    day: "numeric",
+  };
+
+  return dateObject.toLocaleDateString("en", {
+    ...defaultOptions,
+    ...options,
   });
 }

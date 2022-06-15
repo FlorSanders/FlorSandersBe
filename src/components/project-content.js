@@ -48,7 +48,9 @@ function ProjectContent({ project }) {
           ))}
         </div>
       ) : null}
-      <span className="font-poppins">{formatIsoDate(date)}</span>
+      <span className="font-poppins">
+        {formatIsoDate(date, { day: undefined })}
+      </span>
       <GatsbyImage
         image={getImage(cover)}
         width={750}
