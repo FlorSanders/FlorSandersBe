@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import { Layout, Input, P, A, Pagination } from "../components";
-import { formatIsoDate } from "../utils";
+import { StaticImage } from "gatsby-plugin-image";
+import fuzzysort from "fuzzysort";
+import { Layout, Input, Pagination, PostPreview } from "../components";
 
 export default function Writing({ data }) {
   // Constants
@@ -23,8 +23,15 @@ export default function Writing({ data }) {
 
     const sortedPosts = allPosts.sort((a, b) => (a.date < b.date ? 1 : -1));
 
-    setPosts(sortedPosts);
-  }, [data?.allMdx?.nodes]);
+    if (search) {
+      const results = fuzzysort.go(search, sortedPosts, {
+        keys: ["title", "subtitle", "tagsString"],
+      });
+      setPosts(results.map((result) => result.obj));
+    } else {
+      setPosts(sortedPosts);
+    }
+  }, [search, data?.allMdx?.nodes]);
 
   return (
     <Layout
@@ -53,59 +60,7 @@ export default function Writing({ data }) {
       />
       <div className="w-10/12 grid grid-cols-3">
         {posts
-          .map(
-            (
-              { id, slug, title, subtitle, excerpt, date, author, tags, cover },
-              index
-            ) => {
-              let containerClassName = "";
-              let imageClassName = "";
-
-              const groupIndex = Math.floor(index / 3);
-              if (
-                (index % 3 === 0 && groupIndex % 2 === 0) ||
-                (index % 3 === 2 && groupIndex % 2 === 1)
-              ) {
-                containerClassName = "flex-row col-span-2 row-span-1";
-                imageClassName = "rounded-l-lg";
-              } else if (
-                (index % 3 === 1 && groupIndex % 2 === 0) ||
-                (index % 3 === 0 && groupIndex % 2 === 1)
-              ) {
-                containerClassName = "flex-col col-span-1 row-span-2";
-                imageClassName = "rounded-t-lg";
-              } else if (
-                (index % 3 === 2 && groupIndex % 2 === 0) ||
-                (index % 3 === 1 && groupIndex % 2 === 1)
-              ) {
-                containerClassName = "flex-row-reverse col-span-2 row-span-1";
-                imageClassName = "rounded-r-lg";
-              }
-
-              return (
-                <div
-                  key={id}
-                  className={`flex m-8 border border-black rounded-lg ${containerClassName}`}
-                >
-                  <A to={`/${slug}`} className="flex-1 overflow-hidden">
-                    <GatsbyImage
-                      image={getImage(cover)}
-                      alt={`${title} cover image`}
-                      className={`aspect-square h-full ${imageClassName}`}
-                    />
-                  </A>
-                  <div className="flex-1 py-4 px-8 flex flex-col justify-center space-y-2">
-                    <A to={`/${slug}`}>
-                      <h1 className="text-3xl font-poppins">{title}</h1>
-                    </A>
-                    <h2 className="text-xl font-poppins">{subtitle}</h2>
-                    <P>{excerpt}</P>
-                    <span className="font-poppins">{formatIsoDate(date)}</span>
-                  </div>
-                </div>
-              );
-            }
-          )
+          .map((post, index) => <PostPreview post={post} index={index} />)
           .slice((page - 1) * pageSize, page * pageSize)}
       </div>
       <Pagination

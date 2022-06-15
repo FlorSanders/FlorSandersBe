@@ -19,6 +19,7 @@ import SectionSlide from "./slider-section-slide";
 import Timeline from "./timeline";
 import TimelineElement from "./timeline-element";
 import ProjectContent from "./project-content";
+import PostPreview from "./post-preview";
 import Header from "./header";
 import Footer from "./footer";
 import HomeNavbar from "./home-navbar";
@@ -51,6 +52,7 @@ export {
   Timeline,
   TimelineElement,
   ProjectContent,
+  PostPreview,
   Layout,
   Seo,
   Pagination,
