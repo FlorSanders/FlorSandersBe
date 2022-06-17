@@ -10,3 +10,23 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `);
 };
+
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+    query {
+      allMdx(filter: { fileAbsolutePath: { regex: "/.*/posts/.*/" } }) {
+        nodes {
+          slug
+        }
+      }
+    }
+  `);
+
+  data.allMdx.nodes.forEach(({ slug }) => {
+    actions.createPage({
+      path: slug,
+      component: require.resolve(`./src/templates/post.js`),
+      context: { slug: slug },
+    });
+  });
+};
