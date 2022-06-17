@@ -6,34 +6,36 @@ function Layout({ page, title, image, children, className, ...props }) {
   return (
     <>
       <Seo page={page} title={title} />
-      <Header
-        links={[
-          {
-            to: "",
-            label: "About",
-          },
-          {
-            to: "projects",
-            label: "Projects",
-          },
-          {
-            to: "writing",
-            label: "Writing",
-          },
-        ]}
-        page={page}
-        image={image}
-      >
-        <h1 className="text-6xl sm:text-8xl md:text-9xl text-white font-poppins font-bold">
-          {title}
-        </h1>
-      </Header>
-      <main
-        className={`flex flex-col items-center py-4 ${className}`}
-        {...props}
-      >
-        {children}
-      </main>
+      <div className="min-h-screen flex flex-col">
+        <Header
+          links={[
+            {
+              to: "",
+              label: "About",
+            },
+            {
+              to: "projects",
+              label: "Projects",
+            },
+            {
+              to: "writing",
+              label: "Writing",
+            },
+          ]}
+          page={page}
+          image={image}
+        >
+          <h1 className="text-6xl sm:text-8xl md:text-9xl text-white font-poppins font-bold">
+            {title}
+          </h1>
+        </Header>
+        <main
+          className={`flex flex-col flex-grow items-center py-4 ${className}`}
+          {...props}
+        >
+          {children}
+        </main>
+      </div>
       <Footer />
     </>
   );
