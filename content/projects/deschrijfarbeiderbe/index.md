@@ -15,3 +15,7 @@ technologies:
   - label: JavaScript
     url: https://www.javascript.com/
 ---
+
+My uncle, **Bart Van der Straeten**, is a litary critic, writer, editor and poet.
+
+We both started working as independent contractors around the same time, which created the perfect opportunity for me to build the website for his writing consultancy business: [**de schrijfarbeider**](https://www.deschrijfarbeider.be).

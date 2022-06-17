@@ -17,3 +17,11 @@ technologies:
   - label: PostgreSQL
     url: https://www.postgresql.org/
 ---
+
+During the summer of 2021, I collaborated on the wildlife camera trapping project at [WUR](https://www.wur.nl/).
+
+My contributions to the project include:
+
+- Implementing dynamic image sizing for **faster load speeds**.
+- Building a more **resilient upload pipeline**.
+- Cleaning up the **SQL data model**.

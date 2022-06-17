@@ -4,7 +4,7 @@ github:
   - https://github.com/FlorSanders/FlorSandersBe
 url: https://www.florsanders.be
 cover: ./cover.png
-date: 2020-12-25
+date: 2020-07-06
 for: null
 technologies:
   - label: Gatsby
@@ -15,6 +15,8 @@ technologies:
     url: https://www.netlifycms.org/
 ---
 
-At the end of 2020 I started my business as a freelance developer and IT consultant.
+Throughout the Covid19 pandemic we were forced to stay inside.
 
-This website was the first version of my online home as it is today.
+During this time I started building **my online home**, the website you are browsing now.
+
+This site serves as my central hub for **sharing** things on the internet, either professionally or personally.

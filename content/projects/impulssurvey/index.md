@@ -19,3 +19,9 @@ technologies:
   - label: Docker
     url: https://www.docker.com/
 ---
+
+Via [Crunch Analytics](https://www.crunchanalytics.be/) I came into contact with [Alert! opleidingen](https://www.alert-opleidingen.be/), an organization specialized in **increasing the wellbeing** of employees.
+
+Together, we built out a system for them to **manage, create, send and analyze** surveys through Typeform.
+
+The latest web technologies were used to build a **fast and reliable** application.

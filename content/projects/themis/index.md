@@ -17,3 +17,9 @@ technologies:
   - label: RDFa
     url: https://rdfa.info/
 ---
+
+My second assignment at [Redpencil.io](https://redpencil.io/) was themis.
+
+I worked on the integration of **rich semantic metadata** on the webpage by means of **RDFa tags**.
+
+By adding these **linked data** attributes, the webpages can be interpreted and reasoned over by automated systems.

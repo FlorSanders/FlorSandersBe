@@ -17,3 +17,9 @@ technologies:
   - label: SPARQL
     url: https://www.w3.org/TR/sparql-query/
 ---
+
+[Redpencil.io](https://redpencil.io/) was my first client as a freelance software developer.
+
+They make use of **open standards** and **linked data** to make the flemish government both more efficient and more transparent.
+
+I updated the Valvas app to **Ember octane** and refactored both the frontend and backend to support their **new data model**.
