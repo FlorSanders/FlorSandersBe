@@ -83,11 +83,10 @@ export const pageQuery = graphql`
           title
           subtitle
           date
-          author
           tags
           cover {
             childImageSharp {
-              gatsbyImageData(width: 600)
+              gatsbyImageData(width: 1920)
             }
           }
         }
