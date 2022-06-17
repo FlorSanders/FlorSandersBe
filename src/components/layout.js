@@ -25,7 +25,7 @@ function Layout({ page, title, image, children, className, ...props }) {
           page={page}
           image={image}
         >
-          <h1 className="text-6xl sm:text-8xl md:text-9xl text-white font-poppins font-bold">
+          <h1 className="text-6xl sm:text-8xl md:text-9xl text-center text-white font-poppins font-bold">
             {title}
           </h1>
         </Header>
