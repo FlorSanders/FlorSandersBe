@@ -41,12 +41,7 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-sharp",
-      options: {
-        quality: 95,
-      },
-    },
+    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
