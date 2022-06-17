@@ -95,11 +95,6 @@ export const pageQuery = graphql`
         id
         body
         frontmatter {
-          cover {
-            childImageSharp {
-              gatsbyImageData(width: 600)
-            }
-          }
           date
           github
           title
@@ -111,6 +106,11 @@ export const pageQuery = graphql`
           for {
             label
             url
+          }
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 1920)
+            }
           }
         }
       }

@@ -53,8 +53,6 @@ function ProjectContent({ project }) {
       </span>
       <GatsbyImage
         image={getImage(cover)}
-        width={750}
-        quality={95}
         className="w-full aspect-video border-2 border-black rounded-lg"
         alt={`${title} cover image`}
       />
