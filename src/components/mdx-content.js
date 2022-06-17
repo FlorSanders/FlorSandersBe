@@ -23,10 +23,10 @@ function MDXContent({ children, ...props }) {
           />
         ),
         ul: (props) => (
-          <Ul className="list-outside ml-6 space-y-2" {...props} />
+          <Ul className="list-outside ml-6 space-y-1" {...props} />
         ),
         ol: (props) => (
-          <Ol className="list-outside ml-6 space-y-2" {...props} />
+          <Ol className="list-outside ml-6 space-y-1" {...props} />
         ),
         li: (props) => <Li {...props} />,
         // table: TODO,---
