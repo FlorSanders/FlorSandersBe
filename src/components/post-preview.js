@@ -43,7 +43,7 @@ function PostPreview({ post, index, className, ...props }) {
       </A>
       <div className="flex-1 py-4 px-8 flex flex-col justify-center space-y-2">
         <A to={`/${slug}`}>
-          <h1 className="text-3xl font-poppins">{title}</h1>
+          <h1 className="text-2xl md:text-3xl font-poppins">{title}</h1>
         </A>
         <h2 className="text-xl font-poppins">{subtitle}</h2>
         <P>{excerpt}</P>

@@ -19,11 +19,11 @@ function ProjectContent({ project }) {
   return (
     <>
       {url ? (
-        <A to={url} className="text-2xl font-poppins">
+        <A to={url} className="text-xl sm:text-2xl font-poppins">
           {title}
         </A>
       ) : (
-        <h3 className="text-2xl font-poppins">{title}</h3>
+        <h3 className="text-xl sm:text-2xl font-poppins">{title}</h3>
       )}
       <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row flex-wrap">
         {organizations
