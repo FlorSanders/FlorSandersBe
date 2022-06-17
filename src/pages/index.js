@@ -147,7 +147,7 @@ export default function About() {
                   src="../assets/images/fris.jpg"
                   quality={90}
                   className="w-80 rounded-md my-4"
-                  alt="Portrait of Flor Sanders"
+                  alt="FRiS logo"
                 />
               }
             >
@@ -182,7 +182,7 @@ export default function About() {
                   src="../assets/images/freelance.jpg"
                   quality={90}
                   className="w-80 rounded-md my-4"
-                  alt="Portrait of Flor Sanders"
+                  alt="Freelance developer & IT consultant cover"
                 />
               }
               flip={true}
