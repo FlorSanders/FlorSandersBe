@@ -22,17 +22,31 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".mdx", ".md"],
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 600,
+              maxWidth: 750,
+              quality: 90,
+              withWebp: true,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              destinationDir: "files",
             },
           },
         ],
       },
     },
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        quality: 95,
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
