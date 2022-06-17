@@ -8,10 +8,6 @@ tags: ["Project", "IoT", "Solid"]
 cover: "./solidiot-bg.jpg"
 ---
 
-import internshipReport from "./internship-report.pdf"
-
-import thesisReport from "./thesis-report.pdf"
-
 In 2020, during my bachelor thesis at Ghent University and subsequent internship at Digipolis Ghent (now District09), I had the pleasure of collaborating on a set of projects that explore the use of Solid Pods for storage of Internet of Things sensor data. While working on these projects was very interesting and rewarding, I felt like something was still missing. In the technical reports, it is thoroughly described what we did and how we achieved this. However, in this article I want to place the work in its context, explain why I believe it matters, and hopefully spark your interest in the topic at hand.
 
 ## What is Solid?
@@ -23,7 +19,7 @@ In 2020, during my bachelor thesis at Ghent University and subsequent internship
 Before diving into the Solid project, I want to take a step back and have a look at the [world wide web](https://www.w3.org/History.html).<br></br>
 The web, as invented by Sir Tim Berners-Lee in 1989, consists of three core technologies:
 
-- An identification system for the documents on the web: **Universal Resource Locator/Identifier** (URL/URI).
+- An identification system for the documents on the web: **Uniform Resource Locator/Identifier** (URL/URI).
 - A publishing language to describe the content of those documents: **Hypertext Markup Language** (HTML).
 - A protocol for transferring these documents over the internet: **Hypertext Transfer Protocol** (HTTP).
 
@@ -92,4 +88,4 @@ The projects I collaborated on were meant to perform preliminary research verify
 
 ![solid-iot-network](solid-iot-network.jpg)
 
-If you want to get technical, I encourage you to read the [conference paper](https://lib.ugent.be/catalog/pug01:8694858), <a href={internshipReport} download>internship report</a> or <a href={thesisReport} download>thesis report (Dutch)</a> on the subject or to dive into the code base for the [internship project](https://github.com/lab9k/Solid-Pods-For-IoT) or my [bachelor thesis](https://github.com/th1j5/IoT-Solid-project). You're also most welcome to send me a message regarding any questions, remarks or suggestions on the subject.
+If you want to get technical, I encourage you to read the [conference paper](https://lib.ugent.be/catalog/pug01:8694858), [internship report](internship-report.pdf) or [thesis report (Dutch)](thesis-report.pdf) on the subject or to dive into the code base for the [internship project](https://github.com/lab9k/Solid-Pods-For-IoT) or my [bachelor thesis](https://github.com/th1j5/IoT-Solid-project). You're also most welcome to send me a message regarding any questions, remarks or suggestions on the subject.
