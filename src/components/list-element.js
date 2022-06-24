@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 
 function Li({ children, className, ...props }) {
   return (
-    <li className={`font-poppins text-lg text-justify ${className}`} {...props}>
+    <li
+      className={`font-poppins text-md md:text-lg text-justify ${className}`}
+      {...props}
+    >
       {children}
     </li>
   );
