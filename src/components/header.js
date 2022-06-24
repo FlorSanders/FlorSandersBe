@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Navbar } from ".";
 
-function header({ links, children, page, image, ...props }) {
+function header({ links, children, page, image, theme, ...props }) {
   return (
     <header {...props}>
-      <Navbar links={links} active={page} />
+      <Navbar links={links} active={page} theme={theme} />
       <div className="w-full relative">
         {image}
         <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center">
@@ -25,6 +25,7 @@ header.propTypes = {
   ).isRequired,
   children: PropTypes.node,
   page: PropTypes.string,
+  theme: PropTypes.array.isRequired,
 };
 
 export default header;
