@@ -60,7 +60,9 @@ export default function Writing({ data }) {
       />
       <div className="w-10/12 grid grid-cols-3">
         {posts
-          .map((post, index) => <PostPreview post={post} index={index} />)
+          .map((post, index) => (
+            <PostPreview key={post.id} post={post} index={index} />
+          ))
           .slice((page - 1) * pageSize, page * pageSize)}
       </div>
       <Pagination
