@@ -32,7 +32,7 @@ export default function About() {
         />
       }
     >
-      <aside className="w-full space-y-2 text-center text-xl sm:text-2xl md:text-3xl font-poppins font-thin pt-16 pb-12">
+      <aside className="w-full space-y-2 text-center text-xl sm:text-2xl md:text-3xl font-poppins font-thin pt-8 pb-6 sm:pt-12 sm:pb-9 md:pt-16 md:pb-12">
         <p>MSc. EE Student at Ghent University</p>
         <p>Freelance Developer at FS Technologies</p>
       </aside>
@@ -47,12 +47,13 @@ export default function About() {
               alt="Portrait of Flor Sanders"
             />
           }
+          className="sm:px-4"
         >
           <P>Hi! My name is Flor Sanders.</P>
           <P>
             Ever since I was young, I've had a fascination with science and
             technology. Over the years I have explored this interest, building
-            knowledge and honing my skills. Today, I make use innovative
+            knowledge and honing my skills. Today, I make use of innovative
             approaches to solve real-world practical problems.
           </P>
           <P>
@@ -61,25 +62,25 @@ export default function About() {
             economy and entrepreneurship to psychology and philosophy.
           </P>
           <P>
-            As I love meeting new people, I'm alsways up for a drink.
+            As I love meeting new people, I'm always up for a drink.
             <br />
             Feel free to <A to="/#contact">reach out</A>!
           </P>
         </HorizontalSection>
         <ColumnSection
           title="Goals"
-          className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
           <SectionColumn title="Time" icon={<Icons.IoTimeOutline />}>
             <P>
               I truly believe that time is our most valuable possession. By
-              considering this fact often, I hope to spend it in a way that
-              helps me reach all of my other goals.
+              reminding myself of this fact regularly, I hope to spend it in a
+              way that helps me reach all of my other goals.
             </P>
           </SectionColumn>
           <SectionColumn title="Learning" icon={<Icons.IoBookOutline />}>
             <P>
-              I'm an infinitely curious person. Learning about all aspects about
+              I'm an infinitely curious person. Learning about all aspects of
               the wonderful world we live in is what drives me.
             </P>
           </SectionColumn>
@@ -132,7 +133,7 @@ export default function About() {
               <A to="https://em.idlab.ugent.be/welcome.php">
                 EM research group
               </A>{" "}
-              I research 140 GHz System-on-Chip (SoC) antenna arrays for
+              I am researching 140 GHz System-on-Chip (SoC) antenna arrays for
               beyond-5G applications.
             </P>
             <P>
@@ -223,9 +224,13 @@ export default function About() {
         <ColumnSection
           id="contact"
           title="Get in touch"
-          className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
-          <SectionColumn title="Online" icon={<Icons.IoMailOutline />}>
+          <SectionColumn
+            className="hidden sm:block"
+            title="Online"
+            icon={<Icons.IoMailOutline />}
+          >
             <P>
               For short questions or messages, tweet me{" "}
               <A to="https://twitter.com/FlorPSanders">@FlorPSanders</A> or send
@@ -237,7 +242,11 @@ export default function About() {
               <A to="mailto:me@florsanders.be">email</A>.
             </P>
           </SectionColumn>
-          <SectionColumn title="Phone" icon={<Icons.IoCallOutline />}>
+          <SectionColumn
+            className="hidden sm:block"
+            title="Phone"
+            icon={<Icons.IoCallOutline />}
+          >
             <P>
               Want to discuss something quickly over the phone? Urgently need to
               get a hold of me?
@@ -247,13 +256,41 @@ export default function About() {
               <A to="tel:+32479873490">0479873490</A>.
             </P>
           </SectionColumn>
-          <SectionColumn title="Real life" icon={<Icons.IoCafeOutline />}>
+          <SectionColumn
+            className="sm:col-span-2 lg:col-span-1 hidden sm:block"
+            title="Real life"
+            icon={<Icons.IoCafeOutline />}
+          >
             <P>Real conversations happen in the real world.</P>
             <P>
               If you want to discuss something or just have a talk, hit me up
               and we'll make it happen!
             </P>
           </SectionColumn>
+          <div className="space-y-2 sm:hidden">
+            <div className="flex flex-row items-center justify-center space-x-2">
+              <Icons.IoMail className="text-xl" />
+              <A to="mailto:me@florsanders.be">me@florsanders.be</A>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-2">
+              <Icons.IoCall className="text-xl" />
+              <A to="tel:+32479873490">0479873490</A>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-2">
+              <Icons.IoLogoTwitter className="text-xl" />
+              <A to="https://twitter.com/FlorPSanders">@FlorPSanders</A>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-2">
+              <Icons.IoLogoLinkedin className="text-xl" />
+              <A to="https://www.linkedin.com/in/flor-sanders/">
+                in/Flor-Sanders
+              </A>
+            </div>
+            <div className="flex flex-row items-center space-x-2 col-span-2 justify-center">
+              <Icons.IoCafe className="text-xl" />
+              <P>Real life</P>
+            </div>
+          </div>
         </ColumnSection>
       </div>
     </Layout>
