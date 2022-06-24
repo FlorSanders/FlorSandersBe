@@ -19,7 +19,7 @@ const sizeClassNames = {
 
 function Navlink({ to, children, size, className, ...props }) {
   const sizeClassName = size ? sizeClassNames[size] : "";
-  const _className = `block hover:bg-gray-100 w-44 py-2 rounded-lg transition-colors duration-300 hover:no-underline ${sizeClassName} ${className}`;
+  const _className = `block dark:bg-gray-900 dark:hover:bg-gray-800 dark:text-white hover:bg-gray-100 py-2 rounded-lg transition-colors duration-300 hover:no-underline ${sizeClassName} ${className}`;
 
   return (
     <A className={_className} to={to} {...props}>

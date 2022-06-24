@@ -23,11 +23,11 @@ function TimelineElement({
         <div className="w-3/4 mx-6">{description}</div>
       </div>
       <div
-        className="left-timeline absolute top-8 w-8 h-8 z-10 bg-white border-black border-4 rounded-full"
+        className="left-timeline absolute top-8 w-8 h-8 z-10 bg-white dark:bg-gray-900 border-black dark:border-white border-4 rounded-full"
         // left-timeline is a custom className defined in `../styles/global.css`
       />
       <div
-        className={`ml-12 lg:ml-0 flex-1 flex flex-col border-black border-l-8 ${
+        className={`ml-12 lg:ml-0 flex-1 flex flex-col border-black dark:border-white border-l-8 ${
           index % 2 ? "lg:border-r-8 lg:border-l-0" : ""
         }`}
       >

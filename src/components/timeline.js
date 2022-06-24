@@ -26,13 +26,13 @@ function Timeline({ children, pageSize, className, ...props }) {
 
   return (
     <div {...props} className={`w-full flex flex-col ${className}`}>
-      <div className="w-12 h-2 bg-black rounded-lg relative left-7 lg:self-center lg:left-0" />
+      <div className="w-12 h-2 bg-black dark:bg-white rounded-lg relative left-7 lg:self-center lg:left-0" />
       {children.slice(0, limit)}
       {limit < children.length - 1 ? (
-        <div className="border-dashed border-4 border-black relative left-12 h-12 w-0 lg:self-center lg:left-0" />
+        <div className="border-dashed border-4 border-black dark:border-white relative left-12 h-12 w-0 lg:self-center lg:left-0" />
       ) : null}
       <div
-        className="w-12 h-2 bg-black rounded-lg relative left-7 lg:self-center lg:left-0"
+        className="w-12 h-2 bg-black dark:bg-white rounded-lg relative left-7 lg:self-center lg:left-0"
         ref={endOfTimeline}
       />
     </div>

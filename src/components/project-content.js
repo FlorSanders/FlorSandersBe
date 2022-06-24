@@ -53,7 +53,7 @@ function ProjectContent({ project }) {
       </span>
       <GatsbyImage
         image={getImage(cover)}
-        className="w-full aspect-video border-2 border-black rounded-lg"
+        className="w-full aspect-video border-2 border-black dark:border-white rounded-lg"
         alt={`${title} cover image`}
       />
       {technologies && Array.isArray(technologies) ? (

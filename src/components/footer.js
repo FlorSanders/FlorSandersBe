@@ -5,7 +5,7 @@ import { IoHeart, IoLogoGithub } from "react-icons/io5";
 function Footer({ className, ...props }) {
   return (
     <footer
-      className={`pb-16 pt-8 flex flex-col items-center ${className}`}
+      className={`pb-16 pt-8 flex flex-col items-center dark:bg-gray-900 dark:text-white ${className}`}
       {...props}
     >
       <p className="flex flex-row items-center text-lg text-poppins">

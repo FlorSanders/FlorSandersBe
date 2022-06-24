@@ -9,7 +9,9 @@ function Button({ children, onClick, isDisabled, className, ...props }) {
         if (!isDisabled && onClick) onClick();
       }}
       className={`font-poppins text-lg block min-w-28 py-2 rounded-lg transition-colors duration-300 ${
-        isDisabled ? "" : "hover:bg-gray-100"
+        isDisabled
+          ? ""
+          : "hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-white"
       } ${className}`}
       disabled={isDisabled}
       {...props}

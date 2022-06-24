@@ -23,5 +23,13 @@
 }
 
 .hover\:child-opacity-100:hover > * {
-  opacity: 1;
+  @apply opacity-100;
+}
+
+.slick-dots li button:before {
+  @apply text-black dark:text-white;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-black dark:text-white;
 }

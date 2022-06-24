@@ -29,7 +29,7 @@ function PostPreview({ post, index, className, ...props }) {
   return (
     <div
       key={id}
-      className={`flex my-4 md:my-8 md:mx-8 border border-black rounded-lg overflow-hidden col-span-3 flex-col ${
+      className={`flex my-4 md:my-8 md:mx-8 border border-black dark:border-white rounded-lg overflow-hidden col-span-3 flex-col ${
         index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
       } ${containerClassName} ${className}`}
       {...props}

@@ -7,7 +7,7 @@ function Input({ value, placeholder, onChange, className, ...props }) {
       onChange={(e) => onChange(e.target.value)}
       value={value}
       placeholder={placeholder}
-      className={`border border-black p-2 rounded-lg min-w-min ${className}`}
+      className={`border border-black dark:border-white dark:text-black p-2 rounded-lg min-w-min ${className}`}
       {...props}
     />
   );
