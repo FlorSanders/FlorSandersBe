@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 
 function Section({ title, children, className, ...props }) {
   return (
-    <section className={`space-y-6 py-16 ${className}`} {...props}>
+    <section
+      className={`space-y-6 py-8 sm:py-12 md:py-16 ${className}`}
+      {...props}
+    >
       {title ? (
         <h2 className={`font-poppins text-4xl text-center`}>{title}</h2>
       ) : null}

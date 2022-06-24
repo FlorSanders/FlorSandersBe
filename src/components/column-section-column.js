@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function SectionColumn({ icon, title, className, children, ...props }) {
   return (
-    <li className={`space-y-2 px-5 ${className}`} {...props}>
+    <li className={`space-y-2 py-2 sm:px-5 ${className}`} {...props}>
       <div className="w-full text-7xl flex items-center justify-center">
         {icon}
       </div>
