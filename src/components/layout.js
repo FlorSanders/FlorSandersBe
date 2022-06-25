@@ -1,13 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Header, Footer, Seo } from ".";
-import { useColorTheme } from "../utils";
+import useDarkMode from "use-dark-mode";
 
 function Layout({ page, title, image, children, className, ...props }) {
-  const [colorTheme, toggleColorTheme] = useColorTheme();
+  const { value, toggle } = useDarkMode(false, {
+    classNameDark: "dark",
+    classNameLight: "light",
+    storageKey: "theme",
+    minify: true,
+  });
 
   return (
-    <div className={`w-full ${colorTheme}`}>
+    <>
       <Seo page={page} title={title} />
       <div className="min-h-screen flex flex-col">
         <Header
@@ -27,7 +32,7 @@ function Layout({ page, title, image, children, className, ...props }) {
           ]}
           page={page}
           image={image}
-          theme={[colorTheme, toggleColorTheme]}
+          theme={[value, toggle]}
         >
           <h1 className="text-6xl sm:text-8xl md:text-9xl text-center text-white font-poppins font-bold">
             {title}
@@ -41,7 +46,7 @@ function Layout({ page, title, image, children, className, ...props }) {
         </main>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

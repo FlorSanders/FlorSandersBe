@@ -5,7 +5,7 @@ import { Navlink, Button } from ".";
 
 function Navbar({ links, theme, ...props }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [colorTheme, toggleColorTheme] = theme;
+  const [isDarkMode, toggleDarkMode] = theme;
 
   return (
     <div
@@ -34,11 +34,8 @@ function Navbar({ links, theme, ...props }) {
             ))}
           </ul>
         </nav>
-        <Button
-          onClick={toggleColorTheme}
-          className="text-3xl md:text-4xl px-2"
-        >
-          {colorTheme === "light" ? <IoSunnyOutline /> : <IoMoonOutline />}
+        <Button onClick={toggleDarkMode} className="text-3xl md:text-4xl px-2">
+          {isDarkMode ? <IoMoonOutline /> : <IoSunnyOutline />}
         </Button>
         <Button
           onClick={() => setMenuOpen(!menuOpen)}
