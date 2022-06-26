@@ -31,7 +31,7 @@ export default function About({ data }) {
           height={680}
           quality={90}
           alt="About cover image"
-          itemProp="thumbnailUrl"
+          itemProp="image"
         />
       }
     >

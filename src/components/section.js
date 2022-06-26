@@ -7,7 +7,6 @@ function Section({ title, children, className, itemType, ...props }) {
     <section
       className={`space-y-6 py-8 sm:py-12 md:py-16 ${className}`}
       itemScope
-      itemProp="hasPart"
       itemType={itemType || "https://schema.org/WebPageElement"}
       {...props}
     >

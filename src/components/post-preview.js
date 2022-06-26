@@ -42,7 +42,7 @@ function PostPreview({ post, index, className, ...props }) {
           image={getImage(cover)}
           alt={`${title} cover image`}
           className="lg:aspect-square w-full h-full"
-          itemProp="thumbnailUrl"
+          itemProp="image"
         />
       </A>
       <div className="flex-1 py-4 px-8 flex flex-col justify-center">

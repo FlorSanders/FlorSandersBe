@@ -60,7 +60,7 @@ export default function Projects({ data }) {
           height={680}
           quality={90}
           alt="Projects cover image"
-          itemProp="thumbnailUrl"
+          itemProp="image"
         />
       }
     >
@@ -71,7 +71,7 @@ export default function Projects({ data }) {
         className="w-3/4 lg:w-1/2 mb-8"
         placeholder="Search"
       />
-      <Timeline pageSize={3} itemProp="hasPart">
+      <Timeline pageSize={3}>
         {projects.map((project, index) => {
           const { id, body } = project;
 

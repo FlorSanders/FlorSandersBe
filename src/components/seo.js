@@ -14,6 +14,13 @@ function Seo({ page, title, description, ...props }) {
           creator
         }
       }
+      file(relativePath: { eq: "profile-picture.jpg" }) {
+        childImageSharp {
+          fixed {
+            src
+          }
+        }
+      }
     }
   `);
 
@@ -23,6 +30,7 @@ function Seo({ page, title, description, ...props }) {
     siteUrl,
     creator: siteCreator,
   } = data.site.siteMetadata;
+  const { src: profo } = data.file.childImageSharp.fixed;
 
   let _description = description || siteDescription;
   let _title = title ? `${siteTitle} | ${title}` : siteTitle;
@@ -96,6 +104,10 @@ function Seo({ page, title, description, ...props }) {
         {
           property: "twitter:creator",
           content: siteCreator,
+        },
+        {
+          property: "twitter:image",
+          content: `${siteUrl}${profo}`,
         },
       ]}
     />

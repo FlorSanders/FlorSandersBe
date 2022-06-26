@@ -17,7 +17,7 @@ function Footer({ className, ...props }) {
       <div
         className="flex flex-row items-center text-lg text-poppins space-x-1"
         id="license"
-        itemProp="license"
+        itemProp="https://creativecommons.org/ns#license"
         itemScope
         itemType="https://creativecommons.org/ns#License"
       >

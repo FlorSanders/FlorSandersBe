@@ -45,7 +45,7 @@ export default function Writing({ data }) {
           height={680}
           quality={90}
           alt="Writing cover image"
-          itemProp="thumbnailUrl"
+          itemProp="image"
         />
       }
     >

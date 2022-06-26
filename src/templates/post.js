@@ -14,7 +14,7 @@ export default function post({ data }) {
         <GatsbyImage
           image={getImage(cover)}
           alt={`${title} cover image`}
-          itemProp="thumbnailUrl"
+          itemProp="image"
           id="blog-thumbnail"
         />
       }
@@ -25,7 +25,6 @@ export default function post({ data }) {
         itemScope
         itemType="https://schema.org/BlogPosting"
         itemRef="blog-thumbnail"
-        itemProp="mainContentOfPage"
       >
         <h1 className="text-5xl font-poppins" itemProp="headline">
           {title}
