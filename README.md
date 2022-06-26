@@ -1,54 +1,36 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# [www.florsanders.be](https://www.florsanders.be)
+
+Welcome!
+
+This is the repository for [www.florsanders.be](https://www.florsanders.be), my online home!  
+I've made the source code available in the hope you could find some inspiration.  
+You can definitely copy my homework if you at least promise to change it up a bit 😉.
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+Curious to dive in?  
+Here's how you get started!
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+```shell
+# 1. Clone the repository
+git clone git@github.com:FlorSanders/FlorSandersBe.git
+# 2. Change directory
+cd FlorSandersBe
+# 3. Launch development server
+npm start
+```
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+The site is now available at `http://localhost:8000`.
 
-2.  **Start developing.**
+## 🛠️ Built with
 
-    Navigate into your new site’s directory and start it up.
+This website stands on the shoulders of giants!  
+Special thanks goes out to the creators of:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Netlify](https://www.netlify.com/)
+- [Netlify CMS](https://www.netlifycms.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Fuzzysort](https://github.com/farzher/fuzzysort)
+- [Slick Carousel](http://kenwheeler.github.io/slick/)
+- [Use Darkmode](https://github.com/donavon/use-dark-mode)
