@@ -1,4 +1,5 @@
 import Button from "./button";
+import { H1, H2, H3, H4, H5, H6 } from "./heading";
 import P from "./paragraph";
 import A from "./link";
 import Ol from "./ordered-list";
@@ -29,6 +30,12 @@ import Seo from "./seo";
 
 export {
   Button,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
   P,
   A,
   Ol,
