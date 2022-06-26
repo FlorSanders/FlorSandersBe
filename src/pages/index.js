@@ -14,8 +14,11 @@ import {
   SectionSlide,
   Layout,
 } from "../components";
+import { graphql } from "gatsby";
 
-export default function About() {
+export default function About({ data }) {
+  const siteUrl = data.site.siteMetadata.siteUrl;
+
   return (
     <Layout
       page="about"
@@ -28,12 +31,22 @@ export default function About() {
           height={680}
           quality={90}
           alt="About cover image"
+          itemProp="thumbnailUrl"
         />
       }
     >
-      <aside className="w-full space-y-2 text-center text-xl sm:text-2xl md:text-3xl font-poppins font-thin pt-8 pb-6 sm:pt-12 sm:pb-9 md:pt-16 md:pb-12">
-        <p>MSc. EE Student at Ghent University</p>
-        <p>Freelance Developer at FS Technologies</p>
+      <aside
+        className="w-full space-y-2 text-center text-xl sm:text-2xl md:text-3xl font-poppins font-thin pt-8 pb-6 sm:pt-12 sm:pb-9 md:pt-16 md:pb-12"
+        id="titles"
+      >
+        <p>
+          <span itemProp="jobTitle">MSc. EE Student</span> at{" "}
+          <span itemProp="alumniOf">Ghent University</span>
+        </p>
+        <p>
+          <span itemProp="jobTitle">Freelance Developer</span> at{" "}
+          <span itemProp="brand">FS Technologies</span>
+        </p>
       </aside>
       <div className="flex flex-col w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12">
         <HorizontalSection
@@ -44,12 +57,25 @@ export default function About() {
               quality={90}
               className="w-80 rounded-md my-4"
               alt="Portrait of Flor Sanders"
+              itemprop="image"
             />
           }
           className="sm:px-4"
+          itemScope
+          itemType="https://schema.org/Person"
+          itemID={`${siteUrl}/#me`}
+          itemRef="titles contact"
+          itemProp="creator"
         >
-          <P>Hi! My name is Flor Sanders.</P>
           <P>
+            Hi! My name is{" "}
+            <span itemProp="name">
+              <span itemProp="givenName">Flor</span>{" "}
+              <span itemProp="familyName">Sanders</span>
+            </span>
+            .
+          </P>
+          <P itemProp="description">
             Ever since I was young, I've had a fascination with science and
             technology. Over the years I have explored this interest, building
             knowledge and honing my skills. Today, I make use of innovative
@@ -123,6 +149,7 @@ export default function About() {
                 quality={90}
                 className="w-80 rounded-md my-4"
                 alt="Antenna Array"
+                itemProp="image"
               />
             }
             flip={true}
@@ -148,6 +175,7 @@ export default function About() {
                 quality={90}
                 className="w-80 rounded-md my-4"
                 alt="FRiS logo"
+                itemprop="image"
               />
             }
           >
@@ -179,6 +207,7 @@ export default function About() {
                 quality={90}
                 className="w-80 rounded-md my-4"
                 alt="Freelance developer & IT consultant cover"
+                itemprop="image"
               />
             }
             flip={true}
@@ -257,11 +286,15 @@ export default function About() {
           <div className="space-y-2 sm:hidden">
             <div className="flex flex-row items-center justify-center space-x-2">
               <Icons.IoMail className="text-xl" />
-              <A to="mailto:me@florsanders.be">me@florsanders.be</A>
+              <A to="mailto:me@florsanders.be" itemProp="email">
+                me@florsanders.be
+              </A>
             </div>
             <div className="flex flex-row items-center justify-center space-x-2">
               <Icons.IoCall className="text-xl" />
-              <A to="tel:+32479873490">0479873490</A>
+              <A to="tel:+32479873490" itemProp="telephone">
+                0479873490
+              </A>
             </div>
             <div className="flex flex-row items-center justify-center space-x-2">
               <Icons.IoLogoTwitter className="text-xl" />
@@ -283,3 +316,13 @@ export default function About() {
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`;

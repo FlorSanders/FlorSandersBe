@@ -51,9 +51,10 @@ function MDXContent({ children, ...props }) {
         // hr: TODO,
         a: ({ href, ...props }) => <A to={href} {...props} />,
       }}
-      {...props}
     >
-      <MDXRenderer>{children}</MDXRenderer>
+      <div {...props}>
+        <MDXRenderer>{children}</MDXRenderer>
+      </div>
     </MDXProvider>
   );
 }

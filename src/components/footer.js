@@ -6,18 +6,27 @@ function Footer({ className, ...props }) {
   return (
     <footer
       className={`pb-16 pt-8 flex flex-col items-center dark:bg-gray-900 dark:text-white ${className}`}
+      itemScope
+      itemType="https://schema.org/WPFooter"
       {...props}
     >
       <p className="flex flex-row items-center text-lg text-poppins">
         Created with <IoHeart className="mx-1 text-2xl text-red-600" /> by Flor
         Sanders
       </p>
-      <div className="flex flex-row items-center text-lg text-poppins space-x-1">
+      <div
+        className="flex flex-row items-center text-lg text-poppins space-x-1"
+        id="license"
+        itemProp="license"
+        itemScope
+        itemType="https://creativecommons.org/ns#License"
+      >
         <a
           href="https://creativecommons.org/licenses/by/4.0/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-row space-x-1 items-center"
+          itemProp="legalcode"
         >
           <p>License</p>
           <svg height="24px" viewBox="5.5 -3.5 64 64">

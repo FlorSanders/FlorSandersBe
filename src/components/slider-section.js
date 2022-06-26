@@ -4,7 +4,12 @@ import { Section, Slider } from ".";
 
 function SliderSection({ title, children, className, random, ...props }) {
   return (
-    <Section title={title} className={className} {...props}>
+    <Section
+      title={title}
+      className={className}
+      itemType="https://schema.org/ItemList"
+      {...props}
+    >
       <Slider random={random}>{children}</Slider>
     </Section>
   );

@@ -16,19 +16,23 @@ function ProjectContent({ project, index }) {
     for: organizations,
   } = project;
 
+  const Heading = (
+    <H4
+      className={`sm:text-2xl ${index % 2 ? "lg:text-right" : ""}`}
+      itemProp="name"
+    >
+      {title}
+    </H4>
+  );
+
   return (
     <>
       {url ? (
-        <A
-          to={url}
-          className={`text-xl sm:text-2xl ${index % 2 ? "lg:text-right" : ""}`}
-        >
-          {title}
+        <A to={url} itemProp="url">
+          {Heading}
         </A>
       ) : (
-        <H4 className={`sm:text-2xl ${index % 2 ? "lg:text-right" : ""}`}>
-          {title}
-        </H4>
+        Heading
       )}
       <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row flex-wrap">
         {organizations
@@ -46,6 +50,7 @@ function ProjectContent({ project, index }) {
               key={ghUrl}
               to={ghUrl}
               className="flex flex-row items-center pr-1"
+              itemProp="url"
             >
               <IoLogoGithub className="mr-1" />
               {formatGithubUrl(ghUrl)}
@@ -60,9 +65,10 @@ function ProjectContent({ project, index }) {
         image={getImage(cover)}
         className="w-full aspect-video border-2 border-black dark:border-white rounded-lg"
         alt={`${title} cover image`}
+        itemProp="image"
       />
       {technologies && Array.isArray(technologies) ? (
-        <div className="flex flex-row flex-wrap">
+        <div className="flex flex-row flex-wrap" itemProp="keywords">
           {technologies.map(({ label, url }) => (
             <A key={label} to={url} className="pr-1">
               #{label}

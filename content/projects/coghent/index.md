@@ -2,7 +2,7 @@
 title: Collecting Culture - Coghent
 github:
   - https://github.com/FlorSanders/collecting-culture-coghent
-url: https://raw.githubusercontent.com/FlorSanders/ROS-minesweeper/main/Report/PDF/ReportRobotics_Group8_V20201214_FINAL.pdf
+url: https://raw.githubusercontent.com/FlorSanders/collecting-culture-coghent/main/resources/pitch-deck.pdf
 cover: ./cover.png
 date: 2022-06-15
 for:

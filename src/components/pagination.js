@@ -4,7 +4,12 @@ import { Button } from ".";
 
 function Pagination({ page, setPage, maxPage, className, ...props }) {
   return (
-    <div className="grid grid-cols-3 items-center justify-center" {...props}>
+    <div
+      className="grid grid-cols-3 items-center justify-center"
+      {...props}
+      itemScope
+      itemType="https://schema.org/SiteNavigationElement"
+    >
       <Button
         isDisabled={page === 1}
         onClick={() => setPage(page - 1)}

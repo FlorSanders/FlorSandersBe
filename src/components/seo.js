@@ -32,11 +32,14 @@ function Seo({ page, title, description, ...props }) {
       title={_title}
       htmlAttributes={{
         lang: "en",
+        itemscope: undefined,
+        itemtype: "http://schema.org/WebSite",
+        itemID: siteUrl,
       }}
       meta={[
         {
-          name: "description",
-          content: _description,
+          itemprop: "name",
+          content: _title,
         },
         {
           property: "dc:title",
@@ -47,8 +50,20 @@ function Seo({ page, title, description, ...props }) {
           content: _title,
         },
         {
+          itemprop: "url",
+          content: siteUrl,
+        },
+        {
           property: "og:url",
           content: siteUrl,
+        },
+        {
+          itemprop: "description",
+          content: _description,
+        },
+        {
+          name: "description",
+          content: _description,
         },
         {
           property: "og:description",
@@ -73,6 +88,10 @@ function Seo({ page, title, description, ...props }) {
         {
           property: "twitter:description",
           content: _description,
+        },
+        {
+          itemprop: "creator",
+          content: `${siteUrl}/#me`,
         },
         {
           property: "twitter:creator",

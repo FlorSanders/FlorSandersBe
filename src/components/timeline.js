@@ -25,7 +25,12 @@ function Timeline({ children, pageSize, className, ...props }) {
   }, [pageSize]);
 
   return (
-    <div {...props} className={`w-full flex flex-col ${className}`}>
+    <div
+      className={`w-full flex flex-col ${className}`}
+      itemScope
+      itemType="https://schema.org/ItemList"
+      {...props}
+    >
       <div className="w-12 h-2 bg-black dark:bg-white rounded-lg relative left-7 lg:self-center lg:left-0" />
       {children.slice(0, limit)}
       {limit < children.length - 1 ? (

@@ -60,6 +60,7 @@ export default function Projects({ data }) {
           height={680}
           quality={90}
           alt="Projects cover image"
+          itemProp="thumbnailUrl"
         />
       }
     >
@@ -70,14 +71,16 @@ export default function Projects({ data }) {
         className="w-3/4 lg:w-1/2 mb-8"
         placeholder="Search"
       />
-      <Timeline pageSize={2}>
+      <Timeline pageSize={3} itemProp="hasPart">
         {projects.map((project, index) => {
           const { id, body } = project;
 
           return (
             <TimelineElement
               key={id}
-              description={<MDXContent>{body}</MDXContent>}
+              description={
+                <MDXContent className="space-y-1">{body}</MDXContent>
+              }
               index={index}
             >
               <ProjectContent project={project} index={index} />

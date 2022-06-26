@@ -32,6 +32,9 @@ function PostPreview({ post, index, className, ...props }) {
       className={`flex my-4 md:my-8 md:mx-8 border border-black dark:border-white rounded-lg overflow-hidden col-span-3 flex-col ${
         index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
       } ${containerClassName} ${className}`}
+      itemScope
+      itemType="https://schema.org/BlogPosting"
+      itemID={slug}
       {...props}
     >
       <A to={`/${slug}`} className="flex-1 overflow-hidden">
@@ -39,15 +42,22 @@ function PostPreview({ post, index, className, ...props }) {
           image={getImage(cover)}
           alt={`${title} cover image`}
           className="lg:aspect-square w-full h-full"
+          itemProp="thumbnailUrl"
         />
       </A>
       <div className="flex-1 py-4 px-8 flex flex-col justify-center">
         <A to={`/${slug}`}>
-          <H3 className="md:text-3xl">{title}</H3>
+          <H3 className="md:text-3xl" itemProp="headline">
+            {title}
+          </H3>
         </A>
-        <H4>{subtitle}</H4>
-        <P className="pt-2">{excerpt}</P>
-        <span className="font-poppins pt-2">{formatIsoDate(date)}</span>
+        <H4 itemProp="alternativeHeadline">{subtitle}</H4>
+        <P className="pt-2" itemProp="abstract">
+          {excerpt}
+        </P>
+        <span className="font-poppins pt-2" itemProp="dateCreated">
+          {formatIsoDate(date)}
+        </span>
       </div>
     </div>
   );

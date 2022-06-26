@@ -4,7 +4,7 @@ import { Navbar } from ".";
 
 function header({ links, children, page, image, theme, ...props }) {
   return (
-    <header {...props}>
+    <div {...props}>
       <Navbar links={links} active={page} theme={theme} />
       <div className="w-full relative">
         {image}
@@ -12,7 +12,7 @@ function header({ links, children, page, image, theme, ...props }) {
           {children}
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 

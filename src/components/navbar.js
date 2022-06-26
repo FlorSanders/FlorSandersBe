@@ -8,8 +8,10 @@ function Navbar({ links, theme, ...props }) {
   const [isDarkMode, toggleDarkMode] = theme;
 
   return (
-    <div
+    <header
       className="relative flex flex-row justify-between items-center py-5 px-10 lg:px-20 dark:bg-gray-900"
+      itemScope
+      itemType="https://schema.org/WPHeader"
       {...props}
     >
       <Navlink
@@ -23,6 +25,8 @@ function Navbar({ links, theme, ...props }) {
           className={`font-poppins text-center rounded-lg z-50 absolute right-10 top-20 bg-white dark:bg-gray-900 ${
             menuOpen ? "block" : "hidden"
           } lg:block lg:relative lg:right-0 lg:top-0`}
+          itemScope
+          itemType="https://schema.org/SiteNavigationElement"
         >
           <ul className="flex flex-col lg:flex-row items-center lg:space-x-4">
             {links.map(({ to, label }) => (
@@ -44,7 +48,7 @@ function Navbar({ links, theme, ...props }) {
           <IoMenu />
         </Button>
       </div>
-    </div>
+    </header>
   );
 }
 

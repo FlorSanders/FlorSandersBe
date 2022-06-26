@@ -14,6 +14,7 @@ export default function NotFound() {
           height={680}
           quality={90}
           alt="Not found cover image"
+          itemProp="thumbnailUrl"
         />
       }
       className="h-full justify-center"

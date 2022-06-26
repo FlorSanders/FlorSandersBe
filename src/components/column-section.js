@@ -18,7 +18,7 @@ function ColumnSection({ title, className, children, nCols, ...props }) {
       : "grid-cols-3";
 
   return (
-    <Section title={title} {...props}>
+    <Section title={title} itemType="https://schema.org/ItemList" {...props}>
       <ul className={`grid ${className ? className : nColsClassName}`}>
         {children}
       </ul>
