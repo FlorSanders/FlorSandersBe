@@ -68,5 +68,17 @@ module.exports = {
       },
       __key: "projects",
     },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/*": [
+            "Access-Control-Allow-Origin: *",
+            "Access-Control-Expose-Headers: Content-Type, Link",
+            "Access-Control-Allow-Headers: Accept",
+          ],
+        },
+      },
+    },
   ],
 };
