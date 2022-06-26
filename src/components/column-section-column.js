@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { H3 } from ".";
 
 function SectionColumn({ icon, title, className, children, ...props }) {
   return (
@@ -7,7 +8,7 @@ function SectionColumn({ icon, title, className, children, ...props }) {
       <div className="w-full text-7xl flex items-center justify-center">
         {icon}
       </div>
-      <h3 className="text-2xl font-poppins text-center">{title}</h3>
+      <H3 className="text-center">{title}</H3>
       {children}
     </li>
   );

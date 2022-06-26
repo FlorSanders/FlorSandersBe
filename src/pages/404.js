@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import { Layout } from "../components";
+import { Layout, H1 } from "../components";
 
 export default function NotFound() {
   return (
@@ -18,7 +18,7 @@ export default function NotFound() {
       }
       className="h-full justify-center"
     >
-      <h2 className="text-4xl font-poppins">Nothing to see here...</h2>
+      <H1>Nothing to see here...</H1>
     </Layout>
   );
 }

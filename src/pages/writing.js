@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import fuzzysort from "fuzzysort";
-import { Layout, Input, Pagination, PostPreview } from "../components";
+import { Layout, Input, Pagination, PostPreview, H1 } from "../components";
 
 export default function Writing({ data }) {
   // Constants
@@ -48,7 +48,7 @@ export default function Writing({ data }) {
         />
       }
     >
-      <h2 className="text-4xl font-poppins pt-6 pb-8">Articles</h2>
+      <H1 className="pt-6 pb-8">Articles</H1>
       <Input
         onChange={(value) => {
           setPage(1);

@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { HorizontalContent } from ".";
+import { HorizontalContent, H3 } from ".";
 
 function SectionSlide({ title, children, flip, image, ...props }) {
   return (
     <div className="sm:px-4" {...props}>
       <HorizontalContent image={image} flip={flip}>
-        <h3 className="text-2xl font-poppins text-center">{title}</h3>
+        <H3 className="text-center">{title}</H3>
         {children}
       </HorizontalContent>
     </div>

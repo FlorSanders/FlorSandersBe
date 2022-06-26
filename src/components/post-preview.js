@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { A, P } from ".";
+import { A, P, H3, H4 } from ".";
 import { formatIsoDate } from "../utils";
 
 function PostPreview({ post, index, className, ...props }) {
@@ -41,13 +41,13 @@ function PostPreview({ post, index, className, ...props }) {
           className="lg:aspect-square w-full h-full"
         />
       </A>
-      <div className="flex-1 py-4 px-8 flex flex-col justify-center space-y-2">
+      <div className="flex-1 py-4 px-8 flex flex-col justify-center">
         <A to={`/${slug}`}>
-          <h1 className="text-2xl md:text-3xl font-poppins">{title}</h1>
+          <H3 className="md:text-3xl">{title}</H3>
         </A>
-        <h2 className="text-xl font-poppins">{subtitle}</h2>
-        <P>{excerpt}</P>
-        <span className="font-poppins">{formatIsoDate(date)}</span>
+        <H4>{subtitle}</H4>
+        <P className="pt-2">{excerpt}</P>
+        <span className="font-poppins pt-2">{formatIsoDate(date)}</span>
       </div>
     </div>
   );

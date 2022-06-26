@@ -9,6 +9,7 @@ import {
   Timeline,
   TimelineElement,
   ProjectContent,
+  H1,
 } from "../components";
 
 export default function Projects({ data }) {
@@ -62,7 +63,7 @@ export default function Projects({ data }) {
         />
       }
     >
-      <h2 className="text-4xl font-poppins pt-6 pb-8">Timeline</h2>
+      <H1 className="pt-6 pb-8">Timeline</H1>
       <Input
         onChange={setSearch}
         value={search}
@@ -79,7 +80,7 @@ export default function Projects({ data }) {
               description={<MDXContent>{body}</MDXContent>}
               index={index}
             >
-              <ProjectContent project={project} />
+              <ProjectContent project={project} index={index} />
             </TimelineElement>
           );
         })}
