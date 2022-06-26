@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { IoLogoGithub } from "react-icons/io5";
-import { A } from ".";
+import { A, H4 } from ".";
 import { formatIsoDate, formatGithubUrl } from "../utils";
 
-function ProjectContent({ project }) {
+function ProjectContent({ project, index }) {
   const {
     cover,
     date,
@@ -19,11 +19,16 @@ function ProjectContent({ project }) {
   return (
     <>
       {url ? (
-        <A to={url} className="text-xl sm:text-2xl font-poppins">
+        <A
+          to={url}
+          className={`text-xl sm:text-2xl ${index % 2 ? "lg:text-right" : ""}`}
+        >
           {title}
         </A>
       ) : (
-        <h3 className="text-xl sm:text-2xl font-poppins">{title}</h3>
+        <H4 className={`sm:text-2xl ${index % 2 ? "lg:text-right" : ""}`}>
+          {title}
+        </H4>
       )}
       <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row flex-wrap">
         {organizations

@@ -10,7 +10,6 @@ import {
   HorizontalSection,
   ColumnSection,
   SectionColumn,
-  HorizontalContent,
   SliderSection,
   SectionSlide,
   Layout,
@@ -141,85 +140,74 @@ export default function About() {
               mark the completion of my engineering studies.
             </P>
           </SectionSlide>
-          <div className="px-4">
-            <HorizontalContent
-              image={
-                <StaticImage
-                  src="../assets/images/fris.jpg"
-                  quality={90}
-                  className="w-80 rounded-md my-4"
-                  alt="FRiS logo"
-                />
-              }
-            >
-              <h3 className="text-2xl font-poppins text-center">
-                Student representation
-              </h3>
-              <P>
-                As a former board member at{" "}
-                <A to="https://fris.ugent.be/">FRiS</A> and member of the
-                faculty council of the <A to="https://ugent.be/ea">UGent FEA</A>{" "}
-                as well as various commitees, I defend the interests of my
-                fellow engineering students.
-              </P>
-              <P>My main points of focus are:</P>
-              <Ol>
-                <Li>
-                  High quality courses and learning material, both online and in
-                  person.
-                </Li>
-                <Li>
-                  Stimulation of entrepreneurship and support for
-                  extracurricular activities.
-                </Li>
-                <Li>Support and encouragement for internationalization.</Li>
-              </Ol>
-            </HorizontalContent>
-          </div>
-          <div className="px-4">
-            <HorizontalContent
-              image={
-                <StaticImage
-                  src="../assets/images/freelance.jpg"
-                  quality={90}
-                  className="w-80 rounded-md my-4"
-                  alt="Freelance developer & IT consultant cover"
-                />
-              }
-              flip={true}
-            >
-              <h3 className="text-2xl font-poppins text-center">
-                Freelance projects
-              </h3>
-              <P>
-                As a freelance developer and IT consultant, I help organizations
-                solve problems using cutting-edge technologies.
-              </P>
-              <P>
-                My main strengths lie in web development and scientific
-                programming, though I'm not afraid to tackle other challenges.
-                I've had the chance of working for some amazing organizations,
-                such as:
-              </P>
-              <Ul>
-                <Li>
-                  <A to="https://redpencil.io/">Redpencil.io</A>
-                </Li>
-                <Li>
-                  <A to="https://www.wur.nl">
-                    Wageningen University & Research
-                  </A>
-                </Li>
-                <Li>
-                  <A to="https://alert-opleidingen.be/">Alert! Opleidingen</A>
-                </Li>
-              </Ul>
-              <P>
-                For more information, see my <A to="/projects">projects page</A>
-                .
-              </P>
-            </HorizontalContent>
-          </div>
+          <SectionSlide
+            title="Student representation"
+            image={
+              <StaticImage
+                src="../assets/images/fris.jpg"
+                quality={90}
+                className="w-80 rounded-md my-4"
+                alt="FRiS logo"
+              />
+            }
+          >
+            <P>
+              As a former board member at{" "}
+              <A to="https://fris.ugent.be/">FRiS</A> and member of the faculty
+              council of the <A to="https://ugent.be/ea">UGent FEA</A> as well
+              as various commitees, I defend the interests of my fellow
+              engineering students.
+            </P>
+            <P>My main points of focus are:</P>
+            <Ol>
+              <Li>
+                High quality courses and learning material, both online and in
+                person.
+              </Li>
+              <Li>
+                Stimulation of entrepreneurship and support for extracurricular
+                activities.
+              </Li>
+              <Li>Support and encouragement for internationalization.</Li>
+            </Ol>
+          </SectionSlide>
+          <SectionSlide
+            title="Freelance projects"
+            image={
+              <StaticImage
+                src="../assets/images/freelance.jpg"
+                quality={90}
+                className="w-80 rounded-md my-4"
+                alt="Freelance developer & IT consultant cover"
+              />
+            }
+            flip={true}
+          >
+            <P>
+              As a freelance developer and IT consultant, I help organizations
+              solve problems using cutting-edge technologies.
+            </P>
+            <P>
+              My main strengths lie in web development and scientific
+              programming, though I'm not afraid to tackle other challenges.
+              I've had the chance of working for some amazing organizations,
+              such as:
+            </P>
+            <Ul>
+              <Li>
+                <A to="https://redpencil.io/">Redpencil.io</A>
+              </Li>
+              <Li>
+                <A to="https://www.wur.nl">Wageningen University & Research</A>
+              </Li>
+              <Li>
+                <A to="https://alert-opleidingen.be/">Alert! Opleidingen</A>
+              </Li>
+            </Ul>
+            <P>
+              For more information, see my <A to="/projects">projects page</A>.
+            </P>
+          </SectionSlide>
         </SliderSection>
         <ColumnSection
           id="contact"
@@ -252,8 +240,7 @@ export default function About() {
               get a hold of me?
             </P>
             <P>
-              Feel free to give me a call on{" "}
-              <A to="tel:+32479873490">0479873490</A>.
+              Give me a call on <A to="tel:+32479873490">0479873490</A>.
             </P>
           </SectionColumn>
           <SectionColumn
