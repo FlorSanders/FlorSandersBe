@@ -1,23 +1,25 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Layout } from '../components';
+import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
+import { Layout, H1 } from "../components";
 
-export default function NotFound({data}) {
-    var image = data.file.childImageSharp.fluid;
-    return (
-        <Layout title='Nothing to see here...' image={image} fullheight={true}>
-        </Layout>
-    )
+export default function NotFound() {
+  return (
+    <Layout
+      page="404"
+      title="Not found"
+      image={
+        <StaticImage
+          src="../assets/images/notfound-cover.jpg"
+          width={1920}
+          height={680}
+          quality={90}
+          alt="Not found cover image"
+          itemProp="image"
+        />
+      }
+      className="h-full justify-center"
+    >
+      <H1>Nothing to see here...</H1>
+    </Layout>
+  );
 }
-
-export const query = graphql`
-    query {
-        file(name: { eq: "404_background" }) {
-            childImageSharp {
-                fluid(quality: 100, maxWidth: 1920) {
-                    ...GatsbyImageSharpFluid_withWebp
-                }
-            }
-        }
-    }
-`

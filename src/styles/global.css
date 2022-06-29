@@ -1,0 +1,35 @@
+/* Load fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+/* Load tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Load slick carousel styling */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* Patches and custom CSS */
+
+.left-timeline {
+  left: 2.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .left-timeline {
+    left: calc(50% - 16px);
+  }
+}
+
+.hover\:child-opacity-100:hover > * {
+  @apply opacity-100;
+}
+
+.slick-dots li button:before {
+  @apply text-black dark:text-white;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-black dark:text-white;
+}
