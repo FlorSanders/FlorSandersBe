@@ -1,9 +1,9 @@
 {
   "name": "flor-sanders-be",
   "version": "2.0.0",
-  "private": true,
   "description": "flor-sanders-be",
-  "author": "Flor Sanders",
+  "author": "Flor Sanders (me@florsanders.be)",
+  "license": "Creative Commons Attribution 4.0 International",
   "keywords": [
     "gatsby"
   ],

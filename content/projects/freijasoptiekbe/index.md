@@ -3,7 +3,7 @@ title: Freija's Optiek Website
 github: null
 url: https://www.freijasoptiek.be
 cover: ./cover.png
-date: 2018-09-01
+date: 2019-08-31
 for:
   - label: Freija's Optiek
     url: https://www.freijasoptiek.be

@@ -82,8 +82,8 @@ export default function About({ data }) {
             approaches to solve real-world practical problems.
           </P>
           <P>
-            Besides engineering I enjoy cooking, play the guitar, like reading
-            and have a general interest in a broad range of other subjects, from
+            Besides engineering I enjoy cooking, playing the guitar, reading and
+            have a general interest in a broad range of other subjects, from
             economy and entrepreneurship to psychology and philosophy.
           </P>
           <P>
@@ -147,7 +147,7 @@ export default function About({ data }) {
               <StaticImage
                 src="../assets/images/thesis.jpg"
                 quality={90}
-                className="w-80 rounded-md my-4"
+                className="max-w-xs md:max-w-none md:w-80 rounded-md my-4"
                 alt="Antenna Array"
                 itemProp="image"
               />
@@ -173,7 +173,7 @@ export default function About({ data }) {
               <StaticImage
                 src="../assets/images/fris.jpg"
                 quality={90}
-                className="w-80 rounded-md my-4"
+                className="max-w-xs md:max-w-none md:w-80 rounded-md my-4"
                 alt="FRiS logo"
                 itemprop="image"
               />
@@ -205,7 +205,7 @@ export default function About({ data }) {
               <StaticImage
                 src="../assets/images/freelance.jpg"
                 quality={90}
-                className="w-80 rounded-md my-4"
+                className="max-w-xs md:max-w-none md:w-80 rounded-md my-4"
                 alt="Freelance developer & IT consultant cover"
                 itemprop="image"
               />
