@@ -16,7 +16,9 @@ Here's how you get started!
 git clone git@github.com:FlorSanders/FlorSandersBe.git
 # 2. Change directory
 cd FlorSandersBe
-# 3. Launch development server
+# 3. Install dependencies
+npm install --legacy-peer-deps
+# 4. Launch development server
 npm start
 ```
 
