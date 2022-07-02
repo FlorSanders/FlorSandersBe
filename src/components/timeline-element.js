@@ -10,16 +10,15 @@ function TimelineElement({
 }) {
   return (
     <div
-      className={`hover:child-opacity-100 relative w-full flex items-center ${
+      className={`relative w-full flex items-center ${
         index % 2 ? "flex-row-reverse" : "flex-row"
       } `}
-      // hover:child-opacity-100 is a custom className defined in `../styles/global.css`
       itemProp="itemListElement"
       itemScope
       itemType="https://schema.org/ListItem"
     >
       <div
-        className={`hidden lg:flex opacity-0 transition-opacity duration-300 lg:flex-col lg:flex-1 ${
+        className={`hidden lg:flex transition-opacity duration-300 lg:flex-col lg:flex-1 ${
           index % 2 ? "" : "items-end"
         }`}
       >

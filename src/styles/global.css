@@ -22,10 +22,6 @@
   }
 }
 
-.hover\:child-opacity-100:hover > * {
-  @apply opacity-100;
-}
-
 .slick-dots li button:before {
   @apply text-black dark:text-white;
 }
