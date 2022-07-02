@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: src/assets/images
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    path: "{{title}}/index"
+    editor:
+      preview: false
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Github"
+        name: "github"
+        widget: "list"
+      - label: "URL"
+        name: "url"
+        widget: "string"
+      - label: "Cover"
+        name: "cover"
+        widget: "image"
+        default: "./cover.png"
+        allow_multiple: false
+        choose_url: false
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: ""
+      - label: "Organizations"
+        name: "for"
+        widget: "list"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+      - label: "Technologies"
+        name: "technologies"
+        widget: "list"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+      - label: "Description"
+        name: "body"
+        widget: "markdown"
+  - name: "blog"
+    label: "Blog"
+    folder: "content/posts"
+    create: true
+    path: "{{title}}/index"
+    editor:
+      preview: false
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Subtitle"
+        name: "subtitle"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: ""
+      - label: "Author"
+        name: "author"
+        default: "Flor Sanders"
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+      - label: "Cover"
+        name: "cover"
+        widget: "image"
+        default: "./cover.png"
+        allow_multiple: false
+        choose_url: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
