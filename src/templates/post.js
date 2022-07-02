@@ -35,7 +35,7 @@ export default function post({ data }) {
         <span className="text-xl font-poppins" itemProp="dateCreated">
           {formatIsoDate(date)}
         </span>
-        <MDXContent itemProp="articleBody" className="space-x-4">
+        <MDXContent itemProp="articleBody" className="space-y-4">
           {body}
         </MDXContent>
       </div>
