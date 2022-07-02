@@ -16,7 +16,7 @@ function Seo({ page, title, description, ...props }) {
       }
       file(relativePath: { eq: "profile-picture.jpg" }) {
         childImageSharp {
-          fixed {
+          original {
             src
           }
         }
@@ -30,7 +30,7 @@ function Seo({ page, title, description, ...props }) {
     siteUrl,
     creator: siteCreator,
   } = data.site.siteMetadata;
-  const { src: profo } = data.file.childImageSharp.fixed;
+  const { src: profo } = data.file.childImageSharp.original;
 
   let _description = description || siteDescription;
   let _title = title ? `${siteTitle} | ${title}` : siteTitle;
