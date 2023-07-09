@@ -7,10 +7,11 @@ url: https://www.florsanders.be/posts/solidiot
 cover: ./cover.png
 date: 2020-08-31
 for:
+  
+  - label: Ghent University Bachelor's Dissertation
+    url: https://studiegids.ugent.be/2019/EN/studiefiches/E099020.pdf
   - label: District09
     url: https://district09.gent
-  - label: UGent bachelor thesis
-    url: https://studiegids.ugent.be/2019/EN/studiefiches/E099020.pdf
 technologies:
   - label: Solid
     url: https://solidproject.org/

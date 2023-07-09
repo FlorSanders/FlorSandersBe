@@ -41,10 +41,10 @@ export default function About({ data }) {
       >
         <p>
           <span itemProp="jobTitle">MSc. EE Student</span> at{" "}
-          <span itemProp="alumniOf">Ghent University</span>
+          <span itemProp="alumniOf">Columbia University</span>
         </p>
         <p>
-          <span itemProp="jobTitle">Freelance Developer</span> at{" "}
+          <span itemProp="jobTitle">Freelance Engineering Consultant</span> at{" "}
           <span itemProp="brand">FS Technologies</span>
         </p>
       </aside>
@@ -92,7 +92,7 @@ export default function About({ data }) {
             Feel free to <A to="/#contact">reach out</A>!
           </P>
         </HorizontalSection>
-        <ColumnSection
+        {/* <ColumnSection
           title="Goals"
           className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
@@ -108,39 +108,42 @@ export default function About({ data }) {
               I'm an infinitely curious person. Learning about all aspects of
               the wonderful world we live in is what drives me.
             </P>
-          </SectionColumn>
-          <SectionColumn title="Health" icon={<Icons.IoHeartOutline />}>
-            <P>Mens sana in corpore sano.</P>
             <P>
-              Even the old Greek and Romans already knew the importance of
-              physical health.
+              I am committed to continuously expanding my intellectual horizons
+              and seeking out new skills through diverse educational
+              experiences.
             </P>
           </SectionColumn>
-
           <SectionColumn title="Relationships" icon={<Icons.IoPeopleOutline />}>
             <P>
-              Building and maintaining deep, trustful relationships makes me
-              very happy. Hence, I spend a lot of time and effort in being a
-              supportive and present friend and family member.
+              Building and maintaining deep, trustful relationships lies at the
+              core of what fulfills me. Hence, I spend a lot of time and effort
+              in being a supportive and present friend and family member.
             </P>
           </SectionColumn>
           <SectionColumn title="Food" icon={<Icons.IoNutritionOutline />}>
             <P>
-              Ever since volunteering in the kitchens of{" "}
-              <A to="https://clipvakanties.be/">Clip Taalvakanties</A>, cooking
-              has been a passion of mine. Food contains a lot of culture and
-              identity and has the power to bring people together.
+              Food is not just sustenance, it is an expression of creativity,
+              culture, and joy. Ever since volunteering in the kitchens of Clip
+              Taalvakanties, cooking it been a passion of mine.
+            </P>
+          </SectionColumn>
+          <SectionColumn title="Health" icon={<Icons.IoHeartOutline />}>
+            <P>
+              I strive for optimal well-being, recognizing the
+              interconnectedness of my physical, mental, and emotional health.
+              My good health is what enables me to pursue all of my other goals.
             </P>
           </SectionColumn>
           <SectionColumn title="Travel" icon={<Icons.IoTrainOutline />}>
             <P>
               Travelling not only covers my interest of seeing new places and
-              having novel experiences, they also offer the perfect opportunity
-              to spend quality time with friends and family.
+              experiencing diverse cultures, they also offer the perfect
+              opportunity to spend quality time with friends and family.
             </P>
           </SectionColumn>
-        </ColumnSection>
-        <SliderSection random={true} title="What I'm working on">
+        </ColumnSection> */}
+        {/* <SliderSection random={true} title="What I'm working on">
           <SectionSlide
             title="Master thesis"
             image={
@@ -237,7 +240,7 @@ export default function About({ data }) {
               For more information, see my <A to="/projects">projects page</A>.
             </P>
           </SectionSlide>
-        </SliderSection>
+        </SliderSection> */}
         <ColumnSection
           id="contact"
           title="Get in touch"
@@ -249,9 +252,7 @@ export default function About({ data }) {
             icon={<Icons.IoMailOutline />}
           >
             <P>
-              For short questions or messages, tweet me{" "}
-              <A to="https://twitter.com/FlorPSanders">@FlorPSanders</A> or send
-              me a direct message on{" "}
+              For short questions or messages, send me a message on{" "}
               <A to="https://www.linkedin.com/in/flor-sanders/">LinkedIn</A>.
             </P>
             <P>
@@ -295,10 +296,6 @@ export default function About({ data }) {
               <A to="tel:+32479873490" itemProp="telephone">
                 0479873490
               </A>
-            </div>
-            <div className="flex flex-row items-center justify-center space-x-2">
-              <Icons.IoLogoTwitter className="text-xl" />
-              <A to="https://twitter.com/FlorPSanders">@FlorPSanders</A>
             </div>
             <div className="flex flex-row items-center justify-center space-x-2">
               <Icons.IoLogoLinkedin className="text-xl" />
