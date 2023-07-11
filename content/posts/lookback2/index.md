@@ -70,7 +70,7 @@ Don't believe the difference it can make? Just take a moment to read the testimo
 > During these projects [Flor] has demonstrated a level of professionalism and independence that I usually only observe from people with significantly more experience.  
 > ~ Louis-Philippe Kerkhove @ Crunch Analytics
 
-> While this chapter is closed for now, know we want you back when you return to Belgium.  
+> While this chapter is closed for now, know that we want you back when you return to Belgium.  
 > ~ Emile Derache @ Heliovision & Botko
 
 By embracing my passions, dismissing the non-believers, and consistently going above and beyond, I have grown both personally and professionally. This journey has not only expanded my technical expertise but also solidified my belief in the power of embracing change and pursuing what truly inspires me.

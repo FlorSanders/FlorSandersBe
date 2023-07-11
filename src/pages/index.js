@@ -4,17 +4,13 @@ import * as Icons from "react-icons/io5";
 import {
   P,
   A,
-  Ul,
-  Ol,
-  Li,
   HorizontalSection,
   ColumnSection,
   SectionColumn,
-  SliderSection,
-  SectionSlide,
   Layout,
 } from "../components";
 import { graphql } from "gatsby";
+import CV from "../assets/docs/cv.pdf";
 
 export default function About({ data }) {
   const siteUrl = data.site.siteMetadata.siteUrl;
@@ -89,7 +85,25 @@ export default function About({ data }) {
           <P>
             As I love meeting new people, I'm always up for a drink.
             <br />
-            Feel free to <A to="/#contact">reach out</A>!
+          </P>
+          <P className="pt-3">
+            <a
+              href={CV}
+              download
+              className="bg-gray-100 hover:bg-gray-200 font-bold text-xl py-2 px-3 rounded-md mt-2 flex flex-row items-center justify-center"
+            >
+              <Icons.IoDownloadOutline className="mr-2" />
+              Download CV
+            </a>
+            <a
+              href="https://cal.com/florsanders/meet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-100 hover:bg-gray-200 font-bold text-xl py-2 px-3 rounded-md mt-2 flex flex-row items-center justify-center"
+            >
+              <Icons.IoCalendarOutline className="mr-2" />
+              Schedule a meeting
+            </a>
           </P>
         </HorizontalSection>
         {/* <ColumnSection
