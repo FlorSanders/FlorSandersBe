@@ -30,7 +30,7 @@ I'll give the Brooklyn Bridge another try once summer is over and the streets ar
 
 ![](nyc1-thriftshopping.jpg)
 
-For Europeans like me, New York offers some interesting shopping opportunities, since all the renowned American brands are available at more wallet-friendly prices. But here's a tip: skip the bustling city center and head to Brooklyn for a thrift shopping adventure. In the heart of this borough, you'll find stores like Urban Jungle and Le Point Value, where quality clothing can be had for a mere \$5 to \$10 per piece. It's a budget-conscious shopper's paradise.
+For Europeans like me, New York offers some interesting shopping opportunities, since all the renowned American brands are available at more wallet-friendly prices. But here's a tip: skip the bustling city center and head to Brooklyn for a thrift shopping adventure. In the heart of this borough, you'll find stores like Urban Jungle and Le Point Value, where quality clothing can be had for a mere $5 to $10 per piece. It's a budget-conscious shopper's paradise.
 
 #### 3. Central Park: An Urban Oasis
 
