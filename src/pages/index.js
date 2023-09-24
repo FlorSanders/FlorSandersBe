@@ -90,7 +90,7 @@ export default function About({ data }) {
             <a
               href={CV}
               download
-              className="bg-gray-100 hover:bg-gray-200 font-bold text-xl py-2 px-3 rounded-md mt-2 flex flex-row items-center justify-center"
+              className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white font-bold text-xl py-2 px-3 rounded-md mt-2 flex flex-row items-center justify-center"
             >
               <Icons.IoDownloadOutline className="mr-2" />
               Download CV
@@ -99,7 +99,7 @@ export default function About({ data }) {
               href="https://cal.com/florsanders/meet"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-100 hover:bg-gray-200 font-bold text-xl py-2 px-3 rounded-md mt-2 flex flex-row items-center justify-center"
+              className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white font-bold text-xl py-2 px-3 rounded-md mt-2 flex flex-row items-center justify-center"
             >
               <Icons.IoCalendarOutline className="mr-2" />
               Schedule a meeting
