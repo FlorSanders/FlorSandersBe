@@ -2,7 +2,7 @@
 slug: "nyc1"
 title: "Tales From my Graduate Studies in NYC"
 subtitle: "Chapter 1 - One Week In."
-date: "2023-09-02"
+date: "2023-09-01"
 author: "Flor Sanders"
 tags: ["Personal", "Travel"]
 cover: "./nyc1-bg.jpg"
@@ -77,4 +77,4 @@ As I prepare to dive into my studies at Columbia University in the coming weeks,
 
 ![](nyc1-ihouse.jpg)
 
-I want to express my sincere gratitude to the [Belgian American Education Foundation](https://baef.be/) for their invaluable support, both financially and logistically, in making this adventure possible. The journey is just beginning, and I eagerly anticipate the experiences, growth, and discoveries that lie ahead in the heart of the Big Apple.
+I want to express my sincere gratitude to the [Belgian American Educational Foundation](https://baef.be/) for their invaluable support, both financially and logistically, in making this adventure possible. The journey is just beginning, and I eagerly anticipate the experiences, growth, and discoveries that lie ahead in the heart of the Big Apple.
