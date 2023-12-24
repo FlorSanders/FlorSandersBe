@@ -15,7 +15,7 @@ during this pivotal first month, sharing the profound sense of renewal that has 
 
 ### Cultivating Connections in a New World
 
-One of the most profound challenges in crossing the ocean for a year is the disconnection from my established social circle. My family, friends and girlfriend, anchors of my life, are dearly missed as I carve a new path in this sprawling city. The anticipation of their visits in the coming yea keeps my spirit high, eager to share the wonders of New York City. Fortunately, the marvels of modern communication technology, which happens to be my field of study, bridge the thousands of miles between us.
+One of the most profound challenges in crossing the ocean for a year is the disconnection from my established social circle. My family, friends and girlfriend, anchors of my life, are dearly missed as I carve a new path in this sprawling city. The anticipation of their visits in the coming year keeps my spirit high, eager to share the wonders of New York City. Fortunately, the marvels of modern communication technology, which happens to be my field of study, bridge the thousands of miles between us.
 
 ![](nyc2-ihouse.jpg)
 
