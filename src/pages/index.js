@@ -73,17 +73,21 @@ export default function About({ data }) {
           </P>
           <P itemProp="description">
             Ever since I was young, I've had a fascination with science and
-            technology. Over the years I have explored this interest, building
-            knowledge and honing my skills. Today, I make use of innovative
-            approaches to solve real-world practical problems.
+            technology. I found my passion in the fields of computer science and
+            electrical engineering, which I have pursued in my academic studies
+            at Ghent University and Columbia University. Today, I am committed
+            to leveraging cutting-edge technologies to create positive impact in
+            our world.
           </P>
           <P>
-            Besides engineering I enjoy cooking, playing the guitar, reading and
-            have a general interest in a broad range of other subjects, from
-            economy and entrepreneurship to psychology and philosophy.
+            Beyond engineering, I find joy in the culinary arts, strumming
+            melodies on my guitar, immersing myself in literature, and engaging
+            with diverse topics ranging from economics and entrepreneurship to
+            politics and philosophy.
           </P>
           <P>
-            As I love meeting new people, I'm always up for a drink.
+            I thrive on connection and am always eager to exchange ideas over a
+            drink.
             <br />
           </P>
           <P className="pt-3">
