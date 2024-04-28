@@ -42,6 +42,7 @@ function TimelineElement({
           {...props}
         >
           {children}
+          <div className="pt-4 lg:hidden">{description}</div>
         </div>
       </div>
     </div>
