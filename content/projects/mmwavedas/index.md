@@ -1,11 +1,11 @@
 ---
 title: mmWave Distributed Antenna Systems for beyond-5G Wireless Applications
 github: null
-url: https://ieeexplore.ieee.org/document/9804687
+url: null
 cover: ./cover.png
 date: 2022-06-01
 for:
-  - label: Ghent University Hardware Design Project
+  - label: Ghent University
     url: https://studiegids.ugent.be/2019/EN/studiefiches/E033702.pdf
 technologies:
   - label: Keysight ADS

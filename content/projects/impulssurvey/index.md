@@ -20,8 +20,6 @@ technologies:
     url: https://www.docker.com/
 ---
 
-Via [Crunch Analytics](https://www.crunchanalytics.be/) I came into contact with [Alert! opleidingen](https://www.alert-opleidingen.be/), an organization specialized in **increasing the wellbeing** of employees.
+Via [Crunch Analytics](https://www.crunchanalytics.be/) I came into contact with [Alert! opleidingen](https://www.alert-opleidingen.be/), an consultancy firm specialized in **increasing the wellbeing of employees** at various organizations.
 
-Together, we built out a system for them to **manage, create, send and analyze** surveys through Typeform.
-
-The latest web technologies were used to build a **fast and reliable** application.
+Together, we built a **fast and reliable** web application to **manage, create and send** surveys and implemented **tools and automations** for analysis of the results.
