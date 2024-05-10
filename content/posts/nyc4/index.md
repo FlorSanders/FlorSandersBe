@@ -1,7 +1,7 @@
 ---
 slug: "nyc4"
 title: "Riding the Highs and Lows of Big City Life"
-subtitle: "Chapter 4 - A hundred days remain."
+subtitle: "Chapter 4 - A Hundred Days Remain."
 date: "2024-02-13"
 author: "Flor Sanders"
 tags: ["Personal", "Travel"]
