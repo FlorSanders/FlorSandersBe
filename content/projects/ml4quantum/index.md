@@ -19,4 +19,4 @@ technologies:
 **Quantum computers** hold enourmous potential for solving problems that classical computers are incapable of.
 However, this technology is currently held back by the instability of the quantum states in the qubit and qudit devices.
 
-In this project, an **efficient on-chip machine learning model** is developed for prediction of of **optimal state control** parameters in real-time, helping to alleviate the instability issue.
+In this project, an **efficient on-chip machine learning model** is developed for prediction of **optimal state control** parameters in real-time, helping to alleviate the instability issue.
