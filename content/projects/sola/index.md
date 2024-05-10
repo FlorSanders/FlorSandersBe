@@ -4,7 +4,7 @@ github:
   - https://github.com/FlorSanders/Smart_Offline_LLM_Assistant
 url: null
 cover: ./cover.jpg
-date: 2024-05-08
+date: 2024-05-09
 for:
   - label: Columbia University
     url: https://www.aidl.ee.columbia.edu/documents/deep-learning-on-the-edge

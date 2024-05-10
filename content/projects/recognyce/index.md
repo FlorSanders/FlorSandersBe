@@ -2,7 +2,7 @@
 title: RecogNYCe - Predicting Image Geolocation in NYC
 github:
   - https://github.com/FlorSanders/RecogNYCe
-url: https://raw.githubusercontent.com/FlorSanders/RecogNYCe/main/slides.pdf
+url: null
 cover: ./cover.jpg
 date: 2023-12-07
 for:
@@ -13,10 +13,6 @@ technologies:
     url: https://pytorch.org/
   - label: Svelte
     url: https://svelte.dev/
-  - label: Google Street View
-    url: https://developers.google.com/maps/documentation/javascript/streetview
-  - label: Mapillary
-    url: https://www.mapillary.com/
 ---
 
 Inspired by the [PIGEON](https://arxiv.org/abs/2307.05845v4) project that uses **computer vision** to beat humans at [Geoguessr](https://www.geoguessr.com/),

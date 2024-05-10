@@ -3,7 +3,7 @@ title: On-demand 3D Printing Service
 github: null
 url: null
 cover: ./cover.jpg
-date: 2017-06-30
+date: 2018-06-30
 technologies:
   - label: Prusa i3 MK2
     url: https://blog.prusa3d.com/original-prusa-i3-mk2-release_4332/

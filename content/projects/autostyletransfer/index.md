@@ -2,19 +2,15 @@
 title: Automatic Musical Style Transfer
 github:
   - https://github.com/FlorSanders/AutoStyleTransfer
-url: https://raw.githubusercontent.com/FlorSanders/AutoStyleTransfer/main/slides.pdf
+url: null
 cover: ./cover.jpg
 date: 2023-12-22
 for:
   - label: Columbia University
     url: https://book-wright-ma.github.io/
 technologies:
-  - label: Tensorflow
+  - label: TensorFlow
     url: https://www.tensorflow.org/
-  - label: VAE
-    url: https://en.wikipedia.org/wiki/Variational_autoencoder
-  - label: GAN
-    url: https://en.wikipedia.org/wiki/Generative_adversarial_network
 ---
 
 Curious about what makes **generative AI** models tick, I started this project to automatically transcribe musical pieces from one genre to another.
