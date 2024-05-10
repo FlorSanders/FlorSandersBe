@@ -36,11 +36,12 @@ export default function About({ data }) {
         id="titles"
       >
         <p>
-          <span itemProp="jobTitle">MSc. EE Student</span> at{" "}
+          <span itemProp="jobTitle">MSc. EE Graduate</span> from{" "}
+          <span itemProp="alumniOf">Ghent University</span> and{" "}
           <span itemProp="alumniOf">Columbia University</span>
         </p>
         <p>
-          <span itemProp="jobTitle">Freelance Engineering Consultant</span> at{" "}
+          <span itemProp="jobTitle">Freelance AI Engineer</span> at{" "}
           <span itemProp="brand">FS Technologies</span>
         </p>
       </aside>
@@ -92,14 +93,6 @@ export default function About({ data }) {
           </P>
           <P className="pt-3">
             <a
-              href={CV}
-              download
-              className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white font-bold text-xl py-2 px-3 rounded-md mt-2 flex flex-row items-center justify-center"
-            >
-              <Icons.IoDownloadOutline className="mr-2" />
-              Download CV
-            </a>
-            <a
               href="https://cal.com/florsanders/meet"
               target="_blank"
               rel="noopener noreferrer"
@@ -108,157 +101,16 @@ export default function About({ data }) {
               <Icons.IoCalendarOutline className="mr-2" />
               Schedule a meeting
             </a>
+            <a
+              href={CV}
+              download
+              className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white font-bold text-xl py-2 px-3 rounded-md mt-2 flex flex-row items-center justify-center"
+            >
+              <Icons.IoDownloadOutline className="mr-2" />
+              Download CV
+            </a>
           </P>
         </HorizontalSection>
-        {/* <ColumnSection
-          title="Goals"
-          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <SectionColumn title="Time" icon={<Icons.IoTimeOutline />}>
-            <P>
-              I truly believe that time is our most valuable possession. By
-              reminding myself of this fact regularly, I hope to spend it in a
-              way that helps me reach all of my other goals.
-            </P>
-          </SectionColumn>
-          <SectionColumn title="Learning" icon={<Icons.IoBookOutline />}>
-            <P>
-              I'm an infinitely curious person. Learning about all aspects of
-              the wonderful world we live in is what drives me.
-            </P>
-            <P>
-              I am committed to continuously expanding my intellectual horizons
-              and seeking out new skills through diverse educational
-              experiences.
-            </P>
-          </SectionColumn>
-          <SectionColumn title="Relationships" icon={<Icons.IoPeopleOutline />}>
-            <P>
-              Building and maintaining deep, trustful relationships lies at the
-              core of what fulfills me. Hence, I spend a lot of time and effort
-              in being a supportive and present friend and family member.
-            </P>
-          </SectionColumn>
-          <SectionColumn title="Food" icon={<Icons.IoNutritionOutline />}>
-            <P>
-              Food is not just sustenance, it is an expression of creativity,
-              culture, and joy. Ever since volunteering in the kitchens of Clip
-              Taalvakanties, cooking it been a passion of mine.
-            </P>
-          </SectionColumn>
-          <SectionColumn title="Health" icon={<Icons.IoHeartOutline />}>
-            <P>
-              I strive for optimal well-being, recognizing the
-              interconnectedness of my physical, mental, and emotional health.
-              My good health is what enables me to pursue all of my other goals.
-            </P>
-          </SectionColumn>
-          <SectionColumn title="Travel" icon={<Icons.IoTrainOutline />}>
-            <P>
-              Travelling not only covers my interest of seeing new places and
-              experiencing diverse cultures, they also offer the perfect
-              opportunity to spend quality time with friends and family.
-            </P>
-          </SectionColumn>
-        </ColumnSection> */}
-        {/* <SliderSection random={true} title="What I'm working on">
-          <SectionSlide
-            title="Master thesis"
-            image={
-              <StaticImage
-                src="../assets/images/thesis.jpg"
-                quality={90}
-                className="max-w-xs md:max-w-none md:w-80 rounded-md my-4"
-                alt="Antenna Array"
-                itemProp="image"
-              />
-            }
-            flip={true}
-          >
-            <P>
-              During my master thesis at the{" "}
-              <A to="https://em.idlab.ugent.be/welcome.php">
-                EM research group
-              </A>{" "}
-              I am researching 140 GHz System-on-Chip (SoC) antenna arrays for
-              beyond-5G applications.
-            </P>
-            <P>
-              The thesis is planned to be finished by June 2023, which will also
-              mark the completion of my engineering studies.
-            </P>
-          </SectionSlide>
-          <SectionSlide
-            title="Student representation"
-            image={
-              <StaticImage
-                src="../assets/images/fris.jpg"
-                quality={90}
-                className="max-w-xs md:max-w-none md:w-80 rounded-md my-4"
-                alt="FRiS logo"
-                itemprop="image"
-              />
-            }
-          >
-            <P>
-              As a former board member at{" "}
-              <A to="https://fris.ugent.be/">FRiS</A> and member of the faculty
-              council of the <A to="https://ugent.be/ea">UGent FEA</A> as well
-              as various commitees, I defend the interests of my fellow
-              engineering students.
-            </P>
-            <P>My main points of focus are:</P>
-            <Ol>
-              <Li>
-                High quality courses and learning material, both online and in
-                person.
-              </Li>
-              <Li>
-                Stimulation of entrepreneurship and support for extracurricular
-                activities.
-              </Li>
-              <Li>Support and encouragement for internationalization.</Li>
-            </Ol>
-          </SectionSlide>
-          <SectionSlide
-            title="Freelance projects"
-            image={
-              <StaticImage
-                src="../assets/images/freelance.jpg"
-                quality={90}
-                className="max-w-xs md:max-w-none md:w-80 rounded-md my-4"
-                alt="Freelance developer & IT consultant cover"
-                itemprop="image"
-              />
-            }
-            flip={true}
-          >
-            <P>
-              As a freelance developer and IT consultant, I help organizations
-              solve problems using cutting-edge technologies.
-            </P>
-            <P>
-              My main strengths lie in web development and scientific
-              programming, though I'm not afraid to tackle other challenges.
-              I've had the chance of working for some amazing organizations,
-              such as:
-            </P>
-            <Ul>
-              <Li>
-                <A to="https://redpencil.io/">Redpencil.io</A>
-              </Li>
-              <Li>
-                <A to="https://www.wur.nl">Wageningen University & Research</A>
-              </Li>
-              <Li>
-                <A to="https://alert-opleidingen.be/">Alert! Opleidingen</A>
-              </Li>
-            </Ul>
-            <P>
-              For more information, see my <A to="/projects">projects page</A>.
-            </P>
-          </SectionSlide>
-        </SliderSection> */}
         <ColumnSection
           id="contact"
           title="Get in touch"
