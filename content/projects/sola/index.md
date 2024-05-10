@@ -15,10 +15,6 @@ technologies:
     url: https://openai.com/research/whisper
   - label: llama.cpp
     url: https://github.com/ggerganov/llama.cpp
-  - label: Piper
-    url: https://github.com/rhasspy/piper
-  - label: Nvidia Jetson Nano
-    url: https://developer.nvidia.com/embedded/jetson-nano
 ---
 
 SOLA is a Smart Offline-first LLM Assistant.
