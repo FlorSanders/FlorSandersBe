@@ -68,7 +68,7 @@ For those contemplating pursuing studies at an esteemed institution like Columbi
 
 > A disobedient youth is no longer in fear of his schoolmaster - the relation is rather one of indifference in which schoolmaster and pupil discuss how a good school should be run. To go to school no longer means to be in fear of the master, or merely to learn, but rather implies being interested in the problem of education.
 
-Focus on the problem of your education, make selections of courses which will allow you to gain a deep and broad understanding of the field you wish to master. Talk to your professors and teaching assistants and read the materials to figure out where the gaps in your knowledge and skills lie and use this information to figure out what course projects are most pertinent to your growth. In my experience, prioritizing learning about what interests you, for nothing but its own sake, is the most effective way to find the drive, drive and discipline required to perform the actual work. The grades don't matter too much, they will follow.
+Focus on the problem of your education, make selections of courses which will allow you to gain a deep and broad understanding of the field you wish to master. Talk to your professors and teaching assistants and read the materials to figure out where the gaps in your knowledge and skills lie and use this information to figure out what course projects are most pertinent to your growth. In my experience, prioritizing learning about what interests you, for nothing but its own sake, is the most effective way to find the drive and discipline required to perform the actual work. The grades don't matter too much, they will follow.
 
 ![](./nyc5-reading.jpg)
 
