@@ -2,7 +2,7 @@
 slug: "nyc5"
 title: "Is Studying at Columbia University Worth It?"
 subtitle: "Chapter 5 - Graduating from Columbia Engineering."
-date: "2024-05-10"
+date: "2024-05-12"
 author: "Flor Sanders"
 tags: ["Personal", "Studies"]
 cover: "./nyc5-bg.jpg"
