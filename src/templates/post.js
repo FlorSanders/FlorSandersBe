@@ -13,6 +13,7 @@ export default function post({ data }) {
       image={
         <GatsbyImage
           image={getImage(cover)}
+          className="w-full"
           alt={`${title} cover image`}
           itemProp="image"
           id="blog-thumbnail"

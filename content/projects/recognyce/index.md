@@ -1,13 +1,21 @@
 ---
-title: RecogNYCe - Predicting Image Geolocation in New York City
+title: RecogNYCe - Predicting Image Geolocation in NYC
 github:
   - https://github.com/FlorSanders/RecogNYCe
-url: https://raw.githubusercontent.com/FlorSanders/RecogNYCe/main/slides.pdf
+url: null
 cover: ./cover.jpg
 date: 2023-12-07
 for:
-  - label: Columbia University Deep Learning for Computer Vision
+  - label: Columbia University
     url: https://www.deeplearningforcomputervision.com
+technologies:
+  - label: PyTorch
+    url: https://pytorch.org/
+  - label: Svelte
+    url: https://svelte.dev/
 ---
 
-This course project tackles a Geoguessr-style problem of image geolocation in the bounds of New York City. More specifically, deep learning models were trained to classify in which borough of New York a street-level image was taken. The models proved superior to human performance, which was gauged through a specially developed web-based guessing game.
+Inspired by the [PIGEON](https://arxiv.org/abs/2307.05845v4) project that uses **computer vision** to beat humans at [Geoguessr](https://www.geoguessr.com/),
+we built a minigame where users are served pictures taken in New York City and have to determine what borough they were taken in.
+
+Simultaneously, we developed and trained **deep learning models** to perform the same task. In the end, the models proved **superior to human players**.

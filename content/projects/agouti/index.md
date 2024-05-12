@@ -18,10 +18,6 @@ technologies:
     url: https://www.postgresql.org/
 ---
 
-During the summer of 2021, I collaborated on the wildlife camera trapping project at [WUR](https://www.wur.nl/).
+During the summer of 2021, I collaborated on the wildlife camera trapping project at [Wageningen University and Research](https://www.wur.nl/).
 
-My contributions to the project include:
-
-- Implementing dynamic image sizing for **faster load speeds**.
-- Building a more **resilient upload pipeline**.
-- Cleaning up the **SQL data model**.
+My role was to **streamline image processing** for enhanced speed, **fortify the data upload system**, and **refine the SQL database** for optimal performance and maintainability.
